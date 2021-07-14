@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mohammed Ibrahim Mohammed Mujahid, Front-end web developer, more than one year of Exprince, Wellcome...">
+    <meta name="description" content="محمد ابراهيم محمد مجاهد، مطور وجهات امامية مع خبره اكثر من عام، مرحبا بك">
+    <meta name=”robots” content="index, follow">
+    <title>Mohammed mujahid</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style-of-app.css">
+    <link rel="icon" href="imgs/icon.svg" type="image/svg" sizes="50x50">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="colserFlyBox"><i class="fal fa-arrow-square-right"></i></div>
+    <div class="fly-box">
+        <div class="darkMode desk" id="darkMode" title="Toggle Mode">
+            <i class="fal fa-sun active"></i>
+        </div>
+        <div class="ControlBtns">
+            <div class="next" title="Next"><i class="fal fa-arrow-right"></i></div>
+            <div class="prev" title="Previous"><i class="fal fa-arrow-left"></i></div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="imgViwer">
+            <i class="fal fa-times-hexagon closer" id="imgVwerCloser"></i>
+            <img src="" id="imgBox">
+        </div>
+        <i class="fal fa-bars" id="openNav"></i>
+        <div class="navigator desktop" id="desktop">
+            <ul>
+                <li class="active">
+                    <a href="#home" data-link="main"><i class="fal fa-home"></i> <br/>HOME</a>
+                </li>
+                <li>
+                    <a href="#about-me" data-link="about"><i class="fal fa-user"></i></br> About</a>
+                </li>
+                <li>
+                    <a href="#resume" data-link="resum"><i class="fal fa-graduation-cap"></i><br/> Resume</a>
+                </li>
+                <li>
+                    <a href="#projects" data-link="portfolio"><i class="fal fa-briefcase"></i><br/> Projects</a>
+                </li>
+                <li>
+                    <a href="#contact-me" data-link="contact"><i class="fal fa-envelope"></i><br/> Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="overlay-nav"></div>
+        <div class="navigator mobile" id="mobile">
+
+            <div class="info profPic">
+                <img src="imgs/photo.jpg" alt="Mohamed Mujahid">
+                <h2>Mohamed Mujahid</h2>
+                <p>Frontend & UI/UX Dev.</p>
+            </div>
+            <div class="socila">
+                <a href="https://twitter.com/muojahead" title="Twitter Account" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/muojahead" title="Linkedin Account" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://t.me/muojahead" title="Telegram Account" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://github.com/muojahead" title="GitHub Account" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <ul>
+                <li class="active">
+                    <a href="#home" data-link="main"><i class="fal fa-home"></i> <br/>HOME</a>
+                </li>
+                <li>
+                    <a href="#about-me" data-link="about"><i class="fal fa-user"></i></br> About</a>
+                </li>
+                <li>
+                    <a href="#resume" data-link="resum"><i class="fal fa-graduation-cap"></i><br/> Resume</a>
+                </li>
+                <li>
+                    <a href="#projects" data-link="portfolio"><i class="fal fa-briefcase"></i><br/> Projects</a>
+                </li>
+                <li>
+                    <a href="#contact-me" data-link="contact"><i class="fal fa-envelope"></i><br/> Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div id="zoom">
+            <i class="fal fa-times"></i>
+            <img src="imgs/photo.jpg" alt="Mohammed Ibrahim Mujahid Photo">
+        </div>
+        <div class="prof-info">
+            <div class="info-container ">
+                <span class="block profPic">
+                    <img src="imgs/photo.jpg" alt="Mohammed Ibrahim Mujahid Photo">
+                </span>
+                <h2>Mohamed Mujahid</h2>
+                <p>Frondend & UI/UX Dev.</p>
+                <div class="socila">
+                    <a href="https://twitter.com/muojahead" title="Twitter Account" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/muojahead" title="Linkedin Account" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://t.me/muojahead" title="Telegram Account" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="https://github.com/muojahead" title="GitHub Account" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="contact-info">
+                    <p>
+                        <i class="fal fa-phone-alt"></i> +2001151547569<br/>
+                    </p>
+                    <p>
+                        <span title="mohamed.mojahead@gmail.com"><i class="fal fa-envelope"></i> mohamed.mojahead@gmail.com</span> </br>
+                    </p>
+                    <p>
+                        <i class="fal fa-map-marked-alt"></i> Giza, Egypt</br>
+                    </p>
+                    <p>
+                        <i class="fal fa-language"></i> Languages: Arabic - English
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-loader">
+                <i class="fa fa-spinner spin" aria-hidden="true"></i>
+            </div>
+            <div class="main mainLink active" id="main" data-link="#main">
+                <div class="wlcm-msg">
+                    <h1>Mohamed Mujahid</h1>
+                    <p class="writerInDesk"></p>
+                    <a href="#contact-me" id="contactBtn" data-link="contact">Contact Me</a>
+                    <div class="cv-download">
+                        <a href="./pdf/cv.pdf" download>Download CV</a>
+                    </div>
+                </div>
+            </div>
+            <div class="about mainLink" id="about" data-link="#about">
+                <div class="title both">
+                    <h1>About <span>Me</span></h1>
+                </div>
+                <div class="desc">
+                    <div class="paragraph">
+                        I am a junior front-end developer with over a year of experience developing front-end web applications.
+                    </div>
+                    <div class="infoAboutMe">
+                        <span>Age</span> 21 </br>
+                        <span>Residence </span>Imbaba, Giza, Egypt <br>
+                        <span>Phone</span> +2001151547569 <br>
+                        <span>Exprince</span> 1 year and month++.
+                    </div>
+                </div>
+                <div class="featuers">
+                    <div class="title sub">
+                        <h2>What <span>I DO</span></h3>
+                    </div>
+                    <div class="boxs">
+                        <div class="block">
+                            <i class="fas fa-store"></i>
+                            <h3><b>E-Commerce</b></h3>
+                            <p>E-Commerce Is very Important For Your Products Let Some Expert Like me Helps You To Get Your Online Store.</p>
+                        </div>
+                        <div class="block">
+                            <i class="fal fa-browser"></i>
+                            <h3><b>Landing Pages</b></h3>
+                            <p>Landing Page It's simple and Good Choice For Startups and small Business Let Me Give You Information About That, Contact Me.</p>
+                        </div>
+                        <div class="block">
+                            <i class="fad fa-users-class"></i>
+                            <h3><b>Platforms</b></h3>
+                            <p>Are you a teacher or coach, tired of rented places to make a wonderful course in your field, let me I help you to book a dedicated place for you to be under your hand whenever you want to use, and say goodbye to rent a waste
+                                of time and money.</p>
+                        </div>
+                        <div class="block">
+                            <i class="fal fa-file-code"></i>
+                            <h3><b>Web Applcitions and More...</b></h3>
+                            <p>Building applications and scripts with the latest technologies and languages in programming. Take a look at my portfolio. You will want to talk to me about your site.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="facts">
+                    <div class="title sub">
+                        <h2>Fun <span>Facts</span></h2>
+                    </div>
+                    <div class="boxs">
+                        <div class="block">
+                            <i class="fal fa-heart"></i>
+                            <p>Happy Clients</p>
+                            <span>7</span>
+                        </div>
+                        <div class="block">
+                            <i class="fal fa-code"></i>
+                            <p>Lines Of Code</p>
+                            <span>519,100</span>
+                        </div>
+                        <div class="block">
+                            <i class="fal fa-alarm-clock"></i>
+                            <p>Working Hours</p>
+                            <span>5191</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="resum mainLink" id="resum">
+                <div class="title both">
+                    <h1>My <span>Resume</span> </h1>
+                </div>
+                <div class="edu-skill">
+                    <div>
+                        <div class="title sub">
+                            <h2>Education</h2>
+                        </div>
+                        <div class="edu">
+                            <div class="block">
+                                <div class="left-part">
+                                    <h3>8/2019</h3>
+                                    <p>OnLine Learning</p>
+                                </div>
+                                <div class="middel-part">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="right-part">
+                                    <h3>Front-End Devlopement</h3>
+                                    <p>I Started To Become a Front-End Developer by Self Learning, online courses From Udemy, Information Technology Institute, Elzero on Youtube, and Books.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="title sub">
+                            <h2> Exprince</h2>
+                        </div>
+                        <div class="edu">
+                            <div class="block">
+                                <div class="left-part">
+                                    <h3>5/2020 <br> Current</h3>
+                                    <p>Freelancing</p>
+                                </div>
+                                <div class="middel-part">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="right-part">
+                                    <h3>Front-End Devlopement</h3>
+                                    <p>
+                                        I have been working as a front end developer for one year using HTML, CSS, JAVASCRIPT, BootStrap, Jquery and Sass and I have created many professional websites and gained many experiences during this period.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="additional-skills">
+                            <div class="title sub">
+                                <h2>Add-Skills</h2>
+                            </div>
+                            <div class="knowledges">
+                                <span>Regular expression</span><span>Desgin Patterns</span><span>SEO Consept</span><span>Validation</span><span>Time Manegment</span> <span>Self Learning</span><span>Command line</span><span>Speed writing</span><span>Clean Code</span><span>work under pressure</span><span>API Connections</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prog-skills">
+                        <div class="title sub">
+                            <h2>Frontend <span>Skills</span></h2>
+                        </div>
+                        <div class="skills-container">
+                            <div class="skill">
+                                <div class="skill-title">
+                                    HTML
+                                </div>
+                                <div class="skill-prog">
+                                    <span class="counter">90</span>%
+                                </div>
+                                <span class="progress"></span>
+                                <span class="progress-border"></span>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-title">
+                                    CSS
+                                </div>
+                                <div class="skill-prog">
+                                    <span class="counter">90</span>%
+                                </div>
+                                <span class="progress"></span>
+                                <span class="progress-border"></span>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-title">
+                                    SASS
+                                </div>
+                                <div class="skill-prog">
+                                    <span class="counter">90</span>%
+                                </div>
+                                <span class="progress"></span>
+                                <span class="progress-border"></span>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-title">
+                                    Javascript
+                                </div>
+                                <div class="skill-prog">
+                                    <span class="counter">70</span>%
+                                </div>
+                                <span class="progress"></span>
+                                <span class="progress-border"></span>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-title">
+                                    JQuery
+                                </div>
+                                <div class="skill-prog">
+                                    <span class="counter">80</span>%
+                                </div>
+                                <span class="progress"></span>
+                                <span class="progress-border"></span>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-title">
+                                    TypeScript
+                                </div>
+                                <div class="skill-prog">
+                                    <span class="counter">50</span>%
+                                </div>
+                                <span class="progress"></span>
+                                <span class="progress-border"></span>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-title">
+                                    EcmaScript 6
+                                </div>
+                                <div class="skill-prog">
+                                    <span class="counter">50</span>%
+                                </div>
+                                <span class="progress"></span>
+                                <span class="progress-border"></span>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-title">
+                                    Vue JS
+                                </div>
+                                <div class="skill-prog">
+                                    <span class="counter vue">20</span>%
+                                </div>
+                                <span class="progress"></span>
+                                <span class="progress-border"></span>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-title">
+                                    Bootstrap
+                                </div>
+                                <div class="skill-prog">
+                                    <span class="counter">85</span>%
+                                </div>
+                                <span class="progress"></span>
+                                <span class="progress-border"></span>
+                            </div>
+                            <div class="title sub">
+                                <h2>UI/UX <span>Skills</span></h2>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-title">
+                                    UI/UXD
+                                </div>
+                                <div class="skill-prog">
+                                    <span class="counter">70</span>%
+                                </div>
+                                <span class="progress"></span>
+                                <span class="progress-border"></span>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-title">
+                                    Adobe XD
+                                </div>
+                                <div class="skill-prog">
+                                    <span class="counter">90</span>%
+                                </div>
+                                <span class="progress"></span>
+                                <span class="progress-border"></span>
+                            </div>
+                            <div class="title sub">
+                                <h2>other</h2>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-title">
+                                    Microsoft Word
+                                </div>
+                                <div class="skill-prog">
+                                    <span class="counter">70</span>%
+                                </div>
+                                <span class="progress"></span>
+                                <span class="progress-border"></span>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-title">
+                                    GitHub
+                                </div>
+                                <div class="skill-prog">
+                                    <span class="counter">90</span>%
+                                </div>
+                                <span class="progress"></span>
+                                <span class="progress-border"></span>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-title">
+                                    Command Line
+                                </div>
+                                <div class="skill-prog">
+                                    <span class="counter">60</span>%
+                                </div>
+                                <span class="progress"></span>
+                                <span class="progress-border"></span>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-title">
+                                    FileZella
+                                </div>
+                                <div class="skill-prog">
+                                    <span class="counter">100</span>%
+                                </div>
+                                <span class="progress"></span>
+                                <span class="progress-border"></span>
+                            </div>
+                            <!-- <div class="skill">
+                                <div class="skill-title">
+                                    Domains and Hosting
+                                </div>
+                                <div class="skill-prog">
+                                    <span class="counter">60</span>%
+                                </div>
+                                <span class="progress"></span>
+                                <span class="progress-border"></span>
+                            </div> -->
+                        </div>
+
+                    </div>
+                </div>
+                <div class="certifications">
+                    <div class="title sub">
+                        <h2>Certifications</h2>
+                        <p><span>Note:</span> Stop with the cursor on the abbreviated word to see the rest of the course names</p>
+                    </div>
+                    <div class="c-boxs">
+
+                        <div class="c-pic">
+                            <div class="img-box">
+                                <img src="imgs/cssHtml_certi.png" alt="HTML & CSS certificate">
+                            </div>
+                            <div class="info-box">
+                                <p><span>Name:</span> HTML & CSS</p>
+                                <p><span>Verify Link:</span> <a href="https://maharatech.gov.eg/mod/customcert/verify_certificate.php?contextid=35649&code=ruWQ8sKq0j&qrcode=1" target="_blank">ITI Website</a></p>
+                                <p><span>Date:</span> 5/12/2020</p>
+                                <p title="Information Technology Institute"><span>SRC:</span> ITI</p>
+                                <p><span>Verify ID:</span> ruWQ8sKq0j</p>
+                                <p><span>Previwe: <a href="./pdf/html&css.pdf" target="_blank" title="HTML and CSS Course Certificate">Open</a></span></p>
+                            </div>
+                        </div>
+
+                        <div class="c-pic">
+                            <div class="img-box">
+                                <img src="imgs/js_certificate.jpg" alt="JavaScript certificate">
+                            </div>
+                            <div class="info-box">
+                                <p><span>Name:</span> Javascript</p>
+                                <p><span>Verify Link:</span> <a href="https://maharatech.gov.eg/mod/customcert/verify_certificate.php?contextid=162768&code=Z6iHHrfMkL&qrcode=1" target="_blank">ITI Website</a></p>
+                                <p><span>Date:</span> 2/2/2021</p>
+                                <p title="Information Technology Institute"><span>SRC:</span> ITI</p>
+                                <p><span>Verify ID:</span> Z6iHHrfMkL</p>
+                                <p><span>Previwe: <a href="./pdf/js.pdf" target="_blank" title="Javascript Course Certificate">Open</a></span></p>
+                            </div>
+                        </div>
+                        <div class="c-pic">
+                            <div class="img-box">
+                                <img src="imgs/ts.jpg" alt="Typescript certificate">
+                            </div>
+                            <div class="info-box">
+                                <p><span>Name:</span> TypeScript</p>
+                                <p><span>Verify Link:</span> <a href="https://maharatech.gov.eg/mod/customcert/verify_certificate.php?contextid=253403&code=gUfFhgQzPm&qrcode=1" target="_blank">ITI Website</a></p>
+                                <p><span>Date:</span> 25/3/2021</p>
+                                <p title="Information Technology Institute"><span>SRC:</span> ITI</p>
+                                <p><span>Verify ID:</span> gUfFhgQzPm</p>
+                                <p><span>Previwe: <a href="./pdf/ts.pdf" target="_blank" title="Typescript Course Certificate">Open</a></span></p>
+                            </div>
+                        </div>
+                        <div class="c-pic">
+                            <div class="img-box">
+                                <img src="imgs/es6.PNG" alt="Typescript certificate">
+                            </div>
+                            <div class="info-box">
+                                <p><span>Name:</span> ECMAScript 6</p>
+                                <p><span>Verify Link:</span> <a href="https://maharatech.gov.eg/mod/customcert/verify_certificate.php?contextid=206156&code=voNQ8NNU5M&qrcode=1" target="_blank">ITI Website</a></p>
+                                <p><span>Date:</span> 7/3/2021</p>
+                                <p title="Information Technology Institute"><span>SRC:</span> ITI</p>
+                                <p><span>Verify ID:</span> voNQ8NNU5M</p>
+                                <p><span>Previwe: <a href="./pdf/ES6.pdf" target="_blank" title="Typescript Course Certificate">Open</a></span></p>
+                            </div>
+                        </div>
+                        <div class="c-pic">
+                            <div class="img-box">
+                                <img src="imgs/uiuxd.PNG" alt="certificate Image">
+                            </div>
+                            <div class="info-box">
+                                <p title="User Interface & User Exprince Desgin"><span>Name:</span>UI/UXD</p>
+                                <p><span>Verify Link:</span> <a href="https://maharatech.gov.eg/mod/customcert/verify_certificate.php?contextid=282311&code=2s5bX9IY2M&qrcode=1">ITI Website</a></p>
+                                <p><span>Date:</span> 15/6/2021</p>
+                                <p title="Iformation Technology Institute"><span>SRC:</span> ITI</p>
+                                <p><span>Verify ID:</span> 2s5bX9IY2M</p>
+                                <p><span>Previwe: <a href="./pdf/uxd.pdf" target="_blank">Open</a></span></p>
+                            </div>
+                        </div>
+                        <div class="c-pic">
+                            <div class="img-box">
+                                <img src="imgs/xd.png" alt="certificate Image">
+                            </div>
+                            <div class="info-box">
+                                <p><span>Name:</span> Adobe XD</p>
+                                <p><span>Verify Link: </span><a href="https://www.udemy.com/certificate/UC-e0b89fc6-7240-404b-b9f1-0e52502b5c70/" target="_blank">Udemy</a></p>
+                                <p><span>Date:</span> 25/6/2021</p>
+                                <p><span>SRC:</span> Udemy</p>
+                                <p><span>Previwe: <a href="./pdf/xd.pdf" target="_blank">Open</a></span></p>
+                            </div>
+                        </div>
+                        <!-- <div class="c-pic">
+                            <div class="img-box" style="width: 50%;">
+                                <img src="imgs/pwa.png" alt="certificate Image">
+                            </div>
+                            <div class="info-box">
+                                <p title="Progressive Web Apps"><span>Name:</span> PWAs</p>
+                                <p><span>Date:</span> 28/6/2021</p>
+                                <p><span>SRC:</span> LinkedIn learning</p>
+                                <p><span>Previwe: <a href="./pdf/pwa.pdf">Open</a></span></p>
+                            </div>
+                        </div> -->
+                        <!-- <div class="c-pic">
+                            <div class="img-box">
+                                <img src="imgs/dhc.PNG" alt="certificate Image">
+                            </div>
+                            <div class="info-box">
+                                <p><span>Name:</span> Domins & Hosting</p>
+                                <p><span>Date:</span> 1/7/2021</p>
+                                <p><span>SRC:</span> LinkedIn Learning</p>
+                                <p><span>Previwe: <a href="./pdf/domin-hosting.pdf" target="_blank">Open</a></span></p>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio mainLink" id="portfolio">
+                <div class="title both">
+                    <h1>Portfolio </h1>
+                </div>
+                <div class="tabs">
+                    <a href="#All" class="all active">All (<span id="allCount"></span>)</a>
+                    <a href="#fornt-end" class="front">Front-end Projects (<span id="frontCount"></span>)</a>
+                    <a href="#user-interface" class="ui">UI/UX Projects (<span id="uiCount"></span>)</a>
+                </div>
+                <div class="projects">
+                    <div class="project all active front">
+                        <div class="img-box">
+                            <img src="imgs/cshop.PNG" alt="Project 1">
+                        </div>
+                        <div class="info-box">
+                            <h3>Clothing Shop</h3>
+                            <a href="http://webdesginer.me/fashion-shop" target="_blank">Visit</a>
+                        </div>
+                    </div>
+                    <div class="project all active front">
+                        <div class="img-box">
+                            <img src="imgs/fusha.PNG" alt="Project 1">
+                        </div>
+                        <div class="info-box">
+                            <h3>Al-Fusha School</h3>
+                            <a href="http://webdesginer.me/fusha" target="_blank">Visit</a>
+                        </div>
+                    </div>
+                    <div class="project all active front">
+                        <div class="img-box">
+                            <img src="imgs/travelo.PNG" alt="Project 2">
+                        </div>
+                        <div class="info-box">
+                            <h3>Travelo</h3>
+                            <a href="http://webdesginer.me/Travelo" target="_blank">Visit</a>
+                        </div>
+                    </div>
+                    <div class="project all active front">
+                        <div class="img-box">
+                            <img src="imgs/tgudie.PNG" alt="Project 2">
+                        </div>
+                        <div class="info-box">
+                            <h3>Traveler Guide</h3>
+                            <a href="http://webdesginer.me/tgudie" target="_blank">Visit</a>
+                        </div>
+                    </div>
+                    <div class="project all active front">
+                        <div class="img-box">
+                            <img src="imgs/dash.PNG" alt="Project 7">
+                        </div>
+                        <div class="info-box">
+                            <h3>Dashboard</h3>
+                            <a href="http://webdesginer.me/cpanel" target="_blank">Visit</a>
+                        </div>
+                    </div>
+                    <div class="project all active front">
+                        <div class="img-box">
+                            <img src="imgs/axit.PNG" alt="Project 6">
+                        </div>
+                        <div class="info-box">
+                            <h3>Axit</h3>
+                            <a href="./axit/" target="_blank">Visit</a>
+                        </div>
+                    </div>
+                    <div class="project all active front">
+                        <div class="img-box">
+                            <img src="imgs/Coursera.PNG" alt="Project 3">
+                        </div>
+                        <div class="info-box">
+                            <h3>Coursera</h3>
+                            <a href="./cor" target="_blank">Visit</a>
+                        </div>
+                    </div>
+                    <div class="project all active front">
+                        <div class="img-box">
+                            <img src="imgs/ayat.PNG" alt="Project 2">
+                        </div>
+                        <div class="info-box">
+                            <h3>أيات قرآنيه</h3>
+                            <a href="http://webdesginer.me/ayat" target="_blank">Visit</a>
+                        </div>
+                    </div>
+                    <div class="project all active front">
+                        <div class="img-box">
+                            <img src="imgs/ask.PNG" alt="Project 4">
+                        </div>
+                        <div class="info-box">
+                            <h3>Quiz App</h3>
+                            <a href="./ask" target="_blank">Visit</a>
+                        </div>
+                    </div>
+                    <div class="project all active ui">
+                        <div class="img-box">
+                            <img src="imgs/courseraUI.PNG" alt="Project 4">
+                        </div>
+                        <div class="info-box">
+                            <h3>Coursera UI</h3>
+                            <a href="./xd/courseraui.xd" target="_blank">Visit</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="contact mainLink" id="contact">
+                <div class="title both">
+                    <h1>Contact <span>Me</span> </h1>
+                </div>
+                <div class="contact-container">
+                    <div class="icons">
+                        <span>
+                            <i class="fal fa-map-marker"></i>
+                            <br>
+                            Giza, Egypt
+                        </span>
+                        <a href="tel:+2001151547569">
+                            <span>
+                            <i class="fal fa-phone-alt"></i>
+                            <br>
+                            Click on this to Get My Phone Number
+                        </span>
+                        </a>
+                        <a href="mailto:mohamed.mojahead@gmail.com" id="mail">
+                            <span>
+                            <i class="fal fa-envelope"></i>
+                            <br>
+                            Click on this to Get My email
+                        </span>
+                        </a>
+                        <span>
+                            <i class="fal fa-check-square"></i>
+                            <br>
+                            Freelance Available
+                        </span>
+                    </div>
+                    <div class="form">
+                        <div class="imgBoxx">
+                            <div class="overlay"></div>
+                            <img src="imgs/co.svg" alt="Contact Me" height="150px" width="100%">
+                        </div>
+                        <div class="title sub">
+                            <h2>How Can I <span> Help You?</span></h2>
+                        </div>
+                        <form action="contact.php" method="POST">
+                            <div class="custom">
+                                <input type="text" name="username" id="name" autocomplete="off">
+                                <label for="name">Full Name</label>
+                                <span class="err"></span>
+                            </div>
+                            <div class="custom">
+                                <input type="email" name="email" id="email" autocomplete="off">
+                                <label for="email">E-mail</label>
+                                <span class="err"></span>
+                            </div>
+                            <div class="custom">
+                                <input type="text" name="subject" id="subject" autocomplete="off">
+                                <label for="subject">Subject</label>
+                                <span class="err"></span>
+                            </div>
+                            <div class="custom">
+                                <textarea autocomplete="off " name="msg " id="msg"></textarea>
+                                <label for="msg">Message</label>
+                                <span class="err"></span>
+                            </div>
+                            <input type="submit" value="Send">
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script-of-appp.js"></script>
+
+</body>
+
+</html>
