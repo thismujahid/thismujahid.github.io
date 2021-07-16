@@ -199,31 +199,31 @@ for (let i = 0; i < fromInputs.length; i++) {
         }
     };
 }
-// // Form On Send
-// let formSubmit = document.querySelector("form"),
-//     formErrors = document.querySelectorAll(".err");
+// Form On Send
+let formSubmit = document.querySelector("form"),
+    formErrors = document.querySelectorAll(".err");
 
-// formSubmit.onsubmit = function(ene) {
-//     ene.preventDefault();
-//     if (fromInputs[0].value == "") {
-//         formErrors[0].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Insert Your Full Name`;
-//     } else if (fromInputs[1].value == "") {
-//         formErrors[1].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Insert Your E-mail`;
-//     } else if (fromInputs[2].value == "") {
-//         formErrors[2].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Insert The Subject`;
-//     } else if (textArea.value == "") {
-//         formErrors[3].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Insert The Message`;
-//     } else {
-//         let mailMe = confirm(
-//             "Please...click on The Email Box To send Mail to Me Or Phone Box To Call Me, This Form Has an Error Now, Thank You"
-//         );
-//         if (mailMe === true) {
-//             document.getElementById("mail").click();
-//         } else {
-//             alert("I'm So Sorry for, You try again");
-//         }
-//     }
-// };
+formSubmit.onsubmit = function(ene) {
+    ene.preventDefault();
+    if (fromInputs[0].value == "") {
+        formErrors[0].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Insert Your Full Name`;
+    } else if (fromInputs[1].value == "") {
+        formErrors[1].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Insert Your E-mail`;
+    } else if (fromInputs[2].value == "") {
+        formErrors[2].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Insert The Subject`;
+    } else if (textArea.value == "") {
+        formErrors[3].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Insert The Message`;
+    } else {
+        let mailMe = confirm(
+            "Please...click on The Email Box To send Mail to Me Or Phone Box To Call Me, This Form Has an Error Now, Thank You"
+        );
+        if (mailMe === true) {
+            document.getElementById("mail").click();
+        } else {
+            alert("I'm So Sorry for, You try again");
+        }
+    }
+};
 // Control Buttons
 let nextBtn = document.querySelector(".next"),
     prevBtn = document.querySelector(".prev"),
