@@ -199,31 +199,37 @@ for (let i = 0; i < fromInputs.length; i++) {
         }
     };
 }
+// Form notWorking Message
+const msgCloser = document.getElementById("msgformcloser"),
+    theMsg = document.getElementById("notWorkingMsg");
+msgCloser.onclick = () => (theMsg.style.display = "none");
 // Form On Send
 let formSubmit = document.querySelector("form"),
     formErrors = document.querySelectorAll(".err");
 
 formSubmit.onsubmit = function(ene) {
+    theMsg.style.display = "flex";
     ene.preventDefault();
-    if (fromInputs[0].value == "") {
-        formErrors[0].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Insert Your Full Name`;
-    } else if (fromInputs[1].value == "") {
-        formErrors[1].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Insert Your E-mail`;
-    } else if (fromInputs[2].value == "") {
-        formErrors[2].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Insert The Subject`;
-    } else if (textArea.value == "") {
-        formErrors[3].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Insert The Message`;
-    } else {
-        let mailMe = confirm(
-            "Please...click on The Email Box To send Mail to Me Or Phone Box To Call Me, This Form Has an Error Now, Thank You"
-        );
-        if (mailMe === true) {
-            document.getElementById("mail").click();
-        } else {
-            alert("I'm So Sorry for, You try again");
-        }
-    }
+    // if (fromInputs[0].value == "") {
+    //     formErrors[0].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Insert Your Full Name`;
+    // } else if (fromInputs[1].value == "") {
+    //     formErrors[1].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Insert Your E-mail`;
+    // } else if (fromInputs[2].value == "") {
+    //     formErrors[2].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Insert The Subject`;
+    // } else if (textArea.value == "") {
+    //     formErrors[3].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Insert The Message`;
+    // } else {
+    //     let mailMe = confirm(
+    //         "Please...click on The Email Box To send Mail to Me Or Phone Box To Call Me, This Form Has an Error Now, Thank You"
+    //     );
+    //     if (mailMe === true) {
+    //         document.getElementById("mail").click();
+    //     } else {
+    //         alert("I'm So Sorry for, You try again");
+    //     }
+    // }
 };
+
 // Control Buttons
 let nextBtn = document.querySelector(".next"),
     prevBtn = document.querySelector(".prev"),
@@ -274,7 +280,7 @@ prevBtn.onclick = () => {
 let skillLevel = document.querySelectorAll(".counter"),
     skilProg = document.querySelectorAll(".progress");
 let vueCounter = document.querySelector(".counter.vue");
-vueCounter.innerText = Math.ceil((137 * 100) / 670);
+vueCounter.innerText = Math.ceil((250 * 100) / 670);
 for (let i = 0; i < skillLevel.length; i++) {
     skilProg[i].style.width = skillLevel[i].textContent - 2 + ".3" + "%";
 }
