@@ -1094,6 +1094,11 @@ body {
     right: -38px;
 }
 
+.resum .certifications .c-pic .info-box {
+    display: flex;
+    align-items: center;
+}
+
 .resum .certifications .c-pic .img-box {
     margin-right: 5px;
     width: 50%;
@@ -1708,9 +1713,6 @@ i {
     .resum .edu-skill {
         grid-template-columns: repeat(1, 1fr);
     }
-    .resum .certifications .c-boxs {
-        grid-template-columns: repeat(1, 1fr);
-    }
     .resum {
         padding: 40px 10px;
     }
@@ -1725,6 +1727,12 @@ i {
         left: -15%;
     }
     .resum .prog-skills .skills-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media(max-width:730px) {
+    .resum .certifications .c-boxs {
         grid-template-columns: repeat(1, 1fr);
     }
 }
