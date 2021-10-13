@@ -279,20 +279,6 @@ for (let i = 0; i < skillLevel.length; i++) {
     skilProg[i].style.width = skillLevel[i].textContent - 2 + ".3" + "%";
 }
 
-// Open and Close controls box
-let closerFlyBox = document.querySelector(".colserFlyBox"),
-    flyBoxUnActive = document.querySelector(".fly-box");
-
-closerFlyBox.onclick = () => {
-    flyBoxUnActive.classList.add("active");
-    closerFlyBox.classList.add("none");
-    if (flyBoxUnActive.classList.contains("active")) {
-        setTimeout(() => {
-            closerFlyBox.classList.remove("none");
-            flyBoxUnActive.classList.remove("active");
-        }, 5000);
-    }
-};
 // Portfolio Filter
 let tabs = document.querySelectorAll(".tabs a"),
     projects = document.querySelectorAll(".projects .project"),
