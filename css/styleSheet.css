@@ -210,47 +210,18 @@ body {
     -o-transition: .1s linear;
 }
 
-.colserFlyBox {
-    display: none;
-    position: absolute;
-    z-index: 996;
-    width: 27px;
-    height: 27px;
-    text-align: center;
-    left: -6px;
-    cursor: pointer;
-    bottom: 120px;
-    font-size: 31px;
-    background-color: var(--sub-color);
-    line-height: 1px;
-    transition: .3s linear;
-    -webkit-transition: .3s linear;
-    -moz-transition: .3s linear;
-    -ms-transition: .3s linear;
-    -o-transition: .3s linear;
-    opacity: 1;
-}
-
-.colserFlyBox i {
-    margin: -3px 5px 0 0;
-}
-
-.colserFlyBox.none {
-    display: none;
-    opacity: 0;
-}
-
 .fly-box * i {
     display: inline-block;
-    width: 100%;
-    transition: .3s linear;
-    -webkit-transition: .3s linear;
-    -moz-transition: .3s linear;
-    -ms-transition: .3s linear;
-    -o-transition: .3s linear;
-    padding: 4px 0;
+    transition: .2s linear;
+    -webkit-transition: .2s linear;
+    -moz-transition: .2s linear;
+    -ms-transition: .2s linear;
+    -o-transition: .2s linear;
+    padding: 5px 0;
     background-color: var(--thrd-color);
     color: var(--main-color);
+    margin: -2px auto;
+    width: 100%;
 }
 
 .fly-box * i:hover {
@@ -258,12 +229,13 @@ body {
     color: var(--text-color);
 }
 
-.fly-box .ControlBtns {
+.fly-box .prev,
+.fly-box .next,
+.fly-box .darkMode {
     text-align: center;
-}
-
-.fly-box .ControlBtns div {
     width: 100%;
+    font-weight: bold;
+    font-size: 23px;
 }
 
 
@@ -1671,17 +1643,6 @@ i {
     .container .desktop {
         display: none;
     }
-    .fly-box {
-        left: -40px;
-        bottom: 5px;
-        z-index: 1000;
-    }
-    .fly-box.active {
-        left: 0;
-    }
-    .colserFlyBox {
-        display: block;
-    }
     .container #openNav {
         display: block;
         z-index: 900;
@@ -1800,5 +1761,28 @@ i {
     #imgViwer #imgBox {
         height: 43%;
         width: 100%;
+    }
+    .fly-box {
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        background-color: var(--thrd-color);
+        height: 30px;
+    }
+    .darkMode i {
+        font-size: 25px;
+        background-color: unset;
+    }
+    .fly-box i:hover,
+    .fly-box i {
+        background-color: unset;
+        color: var(--main-color);
+    }
+    .fly-box>div {
+        width: calc(100% / 3);
     }
 }
