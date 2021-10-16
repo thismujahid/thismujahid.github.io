@@ -274,7 +274,7 @@ prevBtn.onclick = () => {
 let skillLevel = document.querySelectorAll(".counter"),
     skilProg = document.querySelectorAll(".progress");
 let vueCounter = document.querySelector(".counter.vue");
-vueCounter.innerText = Math.ceil((450 * 100) / 670);
+vueCounter.innerText = Math.ceil((600 * 100) / 670);
 for (let i = 0; i < skillLevel.length; i++) {
     skilProg[i].style.width = skillLevel[i].textContent - 2 + ".3" + "%";
 }
