@@ -14,6 +14,10 @@
     user-zoom: none;
 }
 
+a {
+    color: var(--thrd-color);
+}
+
 body {
     font-family: "Poppins", sans-serif;
     background-color: var(--main-color);
@@ -842,6 +846,16 @@ body {
     color: var(--thrd-color);
 }
 
+.content .prog-skills {
+    margin-left: 25px;
+}
+
+@media (max-width: 800px) {
+    .content .prog-skills {
+        margin-left: 0px;
+    }
+}
+
 .content .prog-skills .title.sub {
     width: 100%;
     margin: 9px 0;
@@ -998,8 +1012,8 @@ body {
     justify-content: center;
 }
 
-.resum .edu-skill .edu .block:last-child {
-    margin-bottom: 60px;
+.resum .edu-skill .edu .block {
+    margin-bottom: 0px;
 }
 
 .resum .edu-skill .edu .left-part {
@@ -1020,7 +1034,7 @@ body {
 }
 
 .resum .edu-skill .edu .middel-part span:first-child {
-    height: 117%;
+    height: 100%;
     width: 1px;
     background-color: var(--main-color);
     position: absolute;

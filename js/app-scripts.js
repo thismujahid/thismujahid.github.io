@@ -282,11 +282,11 @@ for (let i = 0; i < skillLevel.length; i++) {
 // Portfolio Filter
 let tabs = document.querySelectorAll(".tabs a"),
     projects = document.querySelectorAll(".projects .project"),
-    uiProjects = document.querySelectorAll(".projects .project.ui"),
+    vueProjects = document.querySelectorAll(".projects .project.vue"),
     frontProjects = document.querySelectorAll(".projects .project.front");
 
 document.getElementById("allCount").innerText = projects.length;
-document.getElementById("uiCount").innerText = uiProjects.length;
+document.getElementById("uiCount").innerText = vueProjects.length;
 document.getElementById("frontCount").innerText = frontProjects.length;
 for (let t = 0; t < tabs.length; t++) {
     tabs[t].onclick = () => {
@@ -305,14 +305,14 @@ for (let t = 0; t < tabs.length; t++) {
             frontProjects.forEach((frontProject) => {
                 frontProject.classList.remove("active");
             });
-            uiProjects.forEach((uiProject) => {
+            vueProjects.forEach((uiProject) => {
                 uiProject.classList.add("active");
             });
         } else if (tabs[t].classList.contains("front")) {
             projects.forEach((project) => {
                 project.classList.remove("active");
             });
-            uiProjects.forEach((uiProject) => {
+            vueProjects.forEach((uiProject) => {
                 uiProject.classList.remove("active");
             });
             frontProjects.forEach((frontProject) => {
