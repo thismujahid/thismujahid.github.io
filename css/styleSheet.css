@@ -610,6 +610,7 @@ body {
 .prof-info .block img {
     width: 200px;
     height: 200px;
+    object-fit: cover;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
