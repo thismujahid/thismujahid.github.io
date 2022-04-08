@@ -476,6 +476,8 @@ body {
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     cursor: pointer;
+    height: 180px;
+    object-fit: cover;
 }
 
 .container .mobile .info h2 {
