@@ -198,12 +198,12 @@ const msgCloser = document.getElementById("msgformcloser"),
     theMsg = document.getElementById("notWorkingMsg");
 msgCloser.onclick = () => (theMsg.style.display = "none");
 // Form On Send
-let formSubmit = document.querySelector("form"),
-    formErrors = document.querySelectorAll(".err");
+// let formSubmit = document.querySelector("form"),
+    // formErrors = document.querySelectorAll(".err");
 
-formSubmit.onsubmit = function(ene) {
-    theMsg.style.display = "flex";
-    ene.preventDefault();
+// formSubmit.onsubmit = function(ene) {
+    // theMsg.style.display = "flex";
+    // ene.preventDefault();
     // if (fromInputs[0].value == "") {
     //     formErrors[0].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Insert Your Full Name`;
     // } else if (fromInputs[1].value == "") {
@@ -222,7 +222,7 @@ formSubmit.onsubmit = function(ene) {
     //         alert("I'm So Sorry for, You try again");
     //     }
     // }
-};
+// };
 
 // Control Buttons
 let nextBtn = document.querySelector(".next"),
