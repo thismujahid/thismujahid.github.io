@@ -233,19 +233,32 @@ async function handleSubmit(event) {
     }
   }).then(response => {
     if (response.ok) {
-      status.innerHTML = "Thanks... I have received your message, I will reply in a few minutes.";
+        status.innerHTML = `<p><span>Thanks...</span> I have received your message, I will reply in a few minutes.</p>`;
+        setTimeout(() => {
+        status.innerHTML = '';
+        status.style.display = 'none'
+        }, 4000);
       form.reset()
     } else {
       response.json().then(data => {
         if (Object.hasOwn(data, 'errors')) {
           status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
         } else {
-          status.innerHTML = "Oops! There was a problem Sending the Message."
+          status.innerHTML = `<p><span class='red'>Oops!</span> There was a problem Sending the Message.</p>`;
+          setTimeout(() => {
+            status.innerHTML = '';
+            status.style.display = 'none'
+            }, 4000);
         }
       })
     }
   }).catch(error => {
-    status.innerHTML = "Oops! There was a problem Sending the Message."
+      console.log(error);
+    status.innerHTML = `<p><span class='red'>Oops!</span> There was a problem Sending the Message.</p>`;
+    setTimeout(() => {
+      status.innerHTML = '';
+      status.style.display = 'none'
+      }, 4000);
   });
 }
 

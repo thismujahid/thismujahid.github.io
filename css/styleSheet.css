@@ -864,15 +864,17 @@ body {
     margin: 9px 0;
 }
 
-.content .certifications .title.sub p {
+.content .certifications .title.sub p,#status-box p {
     font-size: 12px;
 }
 
-.content .certifications .title.sub p span {
+.content .certifications .title.sub p span #status-box p span{
     color: var(--thrd-color);
     font-weight: bold;
 }
-
+#status-box p span.red{
+    color: red;
+}
 .content .about .desc {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
