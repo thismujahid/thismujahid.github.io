@@ -218,9 +218,7 @@ async function handleSubmit(event) {
     formErrors[0].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Enter Your Full Name`;
 } else if (fromInputs[1].value == "") {
     formErrors[1].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Enter Your E-mail`;
-} else if (emailPattern.test(fromInputs[1].value)) {
-    formErrors[1].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Enter a Valid Email`;
-} else if (fromInputs[2].value == "") {
+}  else if (fromInputs[2].value == "") {
     formErrors[2].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Enter The Subject`;
 } else if (textArea.value == "") {
     formErrors[3].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Enter The Message`;
