@@ -201,11 +201,11 @@ for (let i = 0; i < fromInputs.length; i++) {
 // let formSubmit = document.querySelector("form"),
 var formErrors = document.querySelectorAll(".err");
 
-formSubmit.onsubmit = function(ene) {
-    // theMsg.style.display = "flex";
-    ene.preventDefault();
+// formSubmit.onsubmit = function(ene) {
+//     // theMsg.style.display = "flex";
+//     ene.preventDefault();
 
-};
+// };
 var form = document.getElementById("contactForm");
     
 async function handleSubmit(event) {
