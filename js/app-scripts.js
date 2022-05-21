@@ -194,36 +194,63 @@ for (let i = 0; i < fromInputs.length; i++) {
     };
 }
 // Form notWorking Message
-const msgCloser = document.getElementById("msgformcloser"),
-    theMsg = document.getElementById("notWorkingMsg");
-msgCloser.onclick = () => (theMsg.style.display = "none");
+// const msgCloser = document.getElementById("msgformcloser"),
+    // theMsg = document.getElementById("notWorkingMsg");
+// msgCloser.onclick = () => (theMsg.style.display = "none");
 // Form On Send
 // let formSubmit = document.querySelector("form"),
-    // formErrors = document.querySelectorAll(".err");
+var formErrors = document.querySelectorAll(".err");
 
-// formSubmit.onsubmit = function(ene) {
+formSubmit.onsubmit = function(ene) {
     // theMsg.style.display = "flex";
-    // ene.preventDefault();
-    // if (fromInputs[0].value == "") {
-    //     formErrors[0].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Insert Your Full Name`;
-    // } else if (fromInputs[1].value == "") {
-    //     formErrors[1].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Insert Your E-mail`;
-    // } else if (fromInputs[2].value == "") {
-    //     formErrors[2].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Insert The Subject`;
-    // } else if (textArea.value == "") {
-    //     formErrors[3].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Insert The Message`;
-    // } else {
-    //     let mailMe = confirm(
-    //         "Please...click on The Email Box To send Mail to Me Or Phone Box To Call Me, This Form Has an Error Now, Thank You"
-    //     );
-    //     if (mailMe === true) {
-    //         document.getElementById("mail").click();
-    //     } else {
-    //         alert("I'm So Sorry for, You try again");
-    //     }
-    // }
-// };
+    ene.preventDefault();
 
+};
+var form = document.getElementById("contactForm");
+    
+async function handleSubmit(event) {
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+  event.preventDefault();
+  var status = document.getElementById("status-box");
+  var data = new FormData(event.target);
+  if (fromInputs[0].value == "") {
+    formErrors[0].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Enter Your Full Name`;
+} else if (fromInputs[1].value == "") {
+    formErrors[1].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Enter Your E-mail`;
+} else if (emailPattern.test(fromInputs[1].value)) {
+    formErrors[1].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Enter a Valid Email`;
+} else if (fromInputs[2].value == "") {
+    formErrors[2].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Enter The Subject`;
+} else if (textArea.value == "") {
+    formErrors[3].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Enter The Message`;
+} else {
+    fetch(event.target.action, {
+        method: form.method,
+        body: data,
+    headers: {
+        'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      status.innerHTML = "Thanks... I have received your message, I will reply in a few minutes.";
+      form.reset()
+    } else {
+      response.json().then(data => {
+        if (Object.hasOwn(data, 'errors')) {
+          status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+        } else {
+          status.innerHTML = "Oops! There was a problem Sending the Message."
+        }
+      })
+    }
+  }).catch(error => {
+    status.innerHTML = "Oops! There was a problem Sending the Message."
+  });
+}
+
+}
+form.addEventListener("submit", handleSubmit)
 // Control Buttons
 let nextBtn = document.querySelector(".next"),
     prevBtn = document.querySelector(".prev"),
