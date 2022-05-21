@@ -65,7 +65,17 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+.lds-roller.small{
+    position: relative !important;
+    margin: 0 auto !important;
+    left: unset !important;
+    min-height: unset !important;
+    z-index: unset !important;
+    top: unset !important;
+    background-color: unset !important;
+    height: 100px !important;
+    width: 100px !important;
+} 
 .lds-roller div {
     animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
     transform-origin: 40px 40px;

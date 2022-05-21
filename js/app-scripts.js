@@ -223,9 +223,12 @@ async function handleSubmit(event) {
 } else if (textArea.value == "") {
     formErrors[3].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Enter The Message`;
 } else {
-    status.innerHTML =   `<div class="loadingio-spinner-dual-ring-90mtuueg14c"><div class="ldio-tukjxhtv7ja">
-    <div></div><div><div></div></div>
-    </div></div>`
+    status.innerHTML =   `<div class="lds-roller small">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>`
     fetch(event.target.action, {
         method: form.method,
         body: data,
