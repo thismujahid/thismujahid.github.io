@@ -1456,9 +1456,11 @@ body {
     display: flex;
     height: 100%;
     width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
-.contact .contact-container .icons {
+/* .contact .contact-container .icons {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     width: 30%;
@@ -1515,10 +1517,10 @@ body {
 .contact .contact-container .icons span i {
     font-size: 33px;
     color: var(--thrd-color);
-}
+} */
 
 .contact .contact-container .form {
-    width: 70%;
+    width: 100%;
     padding: 0 10px;
 }
 
@@ -1581,7 +1583,7 @@ body {
     background-color: var(--main-color);
     height: 40px;
     color: var(--text-color);
-    font-size: 20px;
+    font-size: 16px;
     font-family: "Poppins", sans-serif;
 }
 
@@ -1614,7 +1616,7 @@ body {
 
 .contact .contact-container .form form .custom {
     position: relative;
-    margin: 13px 0;
+    margin: 22px 0;
 }
 
 .contact .contact-container .form form .custom input:focus+label,
@@ -1627,7 +1629,6 @@ body {
     font-size: 14px;
     line-height: 1px;
 }
-
 .contact .contact-container .form form .custom label {
     position: absolute;
     z-index: 2;
@@ -1647,10 +1648,12 @@ body {
     color: red;
     padding-left: 6px;
     position: absolute;
-    bottom: -16px;
-    right: 0;
+    bottom: -20px;
+    left: 0;
 }
-
+.contact .form form .custom .err i {
+    color: red !important;
+}
 i {
     color: var(--thrd-color);
 }
