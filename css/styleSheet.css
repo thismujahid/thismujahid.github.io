@@ -645,7 +645,7 @@ font-family: "Poppins", sans-serif;
     z-index: 0;
 }
 
-.prof-info .block img,.profPic {
+.prof-info .block img,.wlcm-msg .profPic {
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -658,7 +658,12 @@ font-family: "Poppins", sans-serif;
     z-index: 2;
     cursor: pointer;
 }
-
+@media (min-width: 992px) {
+  .wlcm-msg  .profPic{
+    display:  none;
+    
+}
+}
 #zoom {
     position: fixed;
     top: 0;
