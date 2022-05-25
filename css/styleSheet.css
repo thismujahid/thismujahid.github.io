@@ -1752,7 +1752,7 @@ i {
 
 @media(max-width:730px) {
     .resum .certifications{
-        padding-top: 20px;
+        padding-top: 30px !important;
     }
     .resum .certifications .c-boxs {
         grid-template-columns: repeat(1, 1fr);
