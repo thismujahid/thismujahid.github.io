@@ -215,13 +215,13 @@ async function handleSubmit(event) {
   var status = document.getElementById("status-box");
   var data = new FormData(event.target);
   if (fromInputs[0].value == "") {
-    formErrors[0].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Enter Your Full Name`;
+    formErrors[0].innerHTML = `<i class="fal fa-exclamation-square"></i> رجاء كتابة اسمك اولا`;
 } else if (fromInputs[1].value == "") {
-    formErrors[1].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Enter Your E-mail`;
+    formErrors[1].innerHTML = `<i class="fal fa-exclamation-square"></i> من فضلك ادخل بريدك الالكتروني وتأكد من انه صحيح `;
 }  else if (fromInputs[2].value == "") {
-    formErrors[2].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Enter The Subject`;
+    formErrors[2].innerHTML = `<i class="fal fa-exclamation-square"></i> يرجي ادخال الموضوع لتوضيح سبب التواصل بشكل افضل`;
 } else if (textArea.value == "") {
-    formErrors[3].innerHTML = `<i class="fal fa-exclamation-square"></i> Please Enter The Message`;
+    formErrors[3].innerHTML = `<i class="fal fa-exclamation-square"></i> لايمكن ان يتم التواصل بين طرفين بدون رسائل، من فضلك ادخل رسالتك`;
 } else {
     status.innerHTML =   `<div class="lds-roller small">
     <div></div>
@@ -237,7 +237,7 @@ async function handleSubmit(event) {
     }
   }).then(response => {
     if (response.ok) {
-        status.innerHTML = `<p><span>Thanks...</span> I have received your message, I will reply in a few minutes.</p>`;
+        status.innerHTML = `<p><span>شكرا...</span> لقد استلمت رسالتك سأقوم بالرد في غضون دقائق معدوده😃❤.</p>`;
         setTimeout(() => {
         status.innerHTML = '';
         status.style.display = 'none'
@@ -248,7 +248,7 @@ async function handleSubmit(event) {
         if (Object.hasOwn(data, 'errors')) {
           status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
         } else {
-          status.innerHTML = `<p><span class='red'>Oops!</span> There was a problem Sending the Message.</p>`;
+          status.innerHTML = `<p><span class='red'>للأسف... </span> حدث خطأ اثناء ارسال الرسالة من فضلك حاول مجددا.</p>`;
           setTimeout(() => {
             status.innerHTML = '';
             status.style.display = 'none'
@@ -258,7 +258,7 @@ async function handleSubmit(event) {
     }
   }).catch(error => {
       console.log(error);
-    status.innerHTML = `<p><span class='red'>Oops!</span> There was a problem Sending the Message.</p>`;
+          status.innerHTML = `<p><span class='red'>للأسف... </span> حدث خطأ اثناء ارسال الرسالة من فضلك حاول مجددا.</p>`;
     setTimeout(() => {
       status.innerHTML = '';
       status.style.display = 'none'

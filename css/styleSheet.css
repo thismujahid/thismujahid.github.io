@@ -1,5 +1,16 @@
 /* Start Global */
-
+@font-face {
+    font-family: "Gess";
+    src: url(../app-font/GE-SS-Two-Bold.otf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Gess";
+    src: url(../app-font/gessLight.otf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
 :root {
     --main-color: #242526;
     --sub-color: #18191a;
@@ -12,6 +23,7 @@
     margin: 0;
     box-sizing: border-box;
     user-zoom: none;
+    font-family: "Gess" !important;
 }
 
 a {
@@ -213,7 +225,7 @@ body {
 .fly-box {
     position: fixed;
     bottom: 10px;
-    right: 15px;
+    left: 15px;
     z-index: 800;
     cursor: pointer;
     height: auto;
@@ -581,6 +593,7 @@ body {
     display: flex;
     justify-content: center;
     overflow-y: auto;
+    align-items: center;
 }
 
 .container .prof-info .info-container {
@@ -691,7 +704,7 @@ body {
 }
 
 .container .prof-info .contact-info {
-    text-align: left;
+    text-align: right;
     font-size: 17px;
 }
 
@@ -838,19 +851,19 @@ body {
 .content .title.both {
     position: relative;
     margin-bottom: 20px;
-    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .content .title.sub {
     position: relative;
     color: var(--text-color);
-    padding-left: 3px;
+    padding-right: 3px;
 }
 
 .content .title.both h1,
 .content .title.sub h2 {
-    padding-left: 2px;
-    border-left: 2px solid var(--thrd-color);
+    padding-right: 6px;
+    border-right: 2px solid var(--thrd-color);
     color: var(--text-color);
     font-weight: bold;
 }
@@ -1033,13 +1046,11 @@ body {
 }
 
 .resum .edu-skill .edu .left-part {
-    text-align: right;
     padding: 15px 12px 0 0;
+    font-size: 12px;
+    width: 25%;
 }
 
-.resum .edu-skill .edu .left-part p {
-    font-size: 14px;
-}
 
 .resum .edu-skill .edu .middel-part {
     display: flex;
@@ -1071,8 +1082,7 @@ body {
 
 .resum .edu-skill .edu .right-part {
     width: 100%;
-    text-align: left;
-    padding: 14px 0 0 15px;
+    padding: 13px 14px 17px 14px;
 }
 
 .resum .certifications .c-boxs {
@@ -1099,6 +1109,7 @@ body {
 .resum .certifications .c-pic .info-box {
     display: flex;
     align-items: center;
+    padding: 10px;
 }
 
 .resum .certifications .c-pic .img-box {
@@ -1143,6 +1154,9 @@ body {
 
 .resum .prog-skills .skills-container .skill {
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
     width: 100%;
     padding: 0 2px;
@@ -1151,15 +1165,6 @@ body {
     border-bottom: 1px solid var(--main-color);
 }
 
-.resum .prog-skills .skills-container .skill .skill-title {
-    text-align: left;
-    width: 80%;
-}
-
-.skill .skill-prog {
-    text-align: right;
-    width: 20%;
-}
 
 .resum .prog-skills .skills-container .skill .progress,
 .resum .prog-skills .skills-container .skill .progress-border {
@@ -1177,7 +1182,7 @@ body {
 }
 
 .resum .prog-skills .skills-container .skill .progress {
-    left: 3px;
+    right: 3px;
 }
 
 .resum .prog-skills .skills-container .skill .progress-border {
@@ -1367,6 +1372,7 @@ body {
     -o-transition: 0.2s linear;
     width: 100%;
     height: auto;
+    text-align: left;
     border-radius: 0 0 10px 10px;
     -webkit-border-radius: 0 0 10px 10px;
     -moz-border-radius: 0 0 10px 10px;
@@ -1634,7 +1640,7 @@ body {
 .contact .contact-container .form form .custom textarea:focus+label,
 .contact .contact-container .form form .custom label.has-data {
     top: 0px;
-    left: 9px;
+    right: 9px;
     background: var(--main-color);
     padding: 0 5px;
     font-size: 14px;
@@ -1645,7 +1651,7 @@ body {
     z-index: 2;
     top: 0;
     top: 7px;
-    left: 10px;
+    right: 10px;
     color: var(--text-color);
     transition: 0.2s ease-in-out;
     -webkit-transition: 0.2s ease-in-out;
@@ -1660,7 +1666,7 @@ body {
     padding-left: 6px;
     position: absolute;
     bottom: -20px;
-    left: 0;
+    right: 0;
 }
 .contact .form form .custom .err i {
     color: red !important;
@@ -1801,6 +1807,7 @@ i {
         z-index: 1000;
         display: flex;
         justify-content: space-around;
+        flex-direction: row-reverse;
         align-items: center;
         width: 100%;
         background-color: var(--thrd-color);
