@@ -1276,6 +1276,7 @@ font-family: "Poppins", sans-serif;
 
 .portfolio .tabs {
     margin: 10px auto;
+    display: flex;
 }
 
 .portfolio .tabs a {
@@ -1287,6 +1288,9 @@ font-family: "Poppins", sans-serif;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    display: block;
+    height: 40px;
+    line-height: 32px;
     margin: 0 2px;
     text-decoration: none;
     transition: .3s linear;
