@@ -1660,7 +1660,7 @@ font-family: "Poppins", sans-serif;
 
 .contact .contact-container .form form .custom {
     position: relative;
-    margin: 22px 0;
+    margin: 26px 0;
 }
 
 .contact .contact-container .form form .custom input:focus+label,
@@ -1692,7 +1692,7 @@ font-family: "Poppins", sans-serif;
     color: red;
     padding-left: 6px;
     position: absolute;
-    bottom: -20px;
+    bottom: -25px;
     right: 0;
 }
 .contact .form form .custom .err i {

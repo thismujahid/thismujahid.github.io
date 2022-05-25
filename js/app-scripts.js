@@ -241,7 +241,7 @@ async function handleSubmit(event) {
         setTimeout(() => {
         status.innerHTML = '';
         status.style.display = 'none'
-        }, 4000);
+        }, 8000);
       form.reset()
     } else {
       response.json().then(data => {
@@ -252,7 +252,7 @@ async function handleSubmit(event) {
           setTimeout(() => {
             status.innerHTML = '';
             status.style.display = 'none'
-            }, 4000);
+            }, 8000);
         }
       })
     }
