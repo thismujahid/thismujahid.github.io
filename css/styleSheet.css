@@ -645,7 +645,7 @@ font-family: "Poppins", sans-serif;
     z-index: 0;
 }
 
-.prof-info .block img,.wlcm-msg .profPic {
+.prof-info .block img,.wlcm-msg .profPic img {
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -913,8 +913,13 @@ font-family: "Poppins", sans-serif;
     color: var(--thrd-color);
     font-weight: bold;
 }
+#status-box {
+    *{
+        color: var(--text-color) !important;
+    }
+}
 #status-box p span.red{
-    color: red;
+    color: red !important;
 }
 .content .about .desc {
     display: grid;
