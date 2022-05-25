@@ -44,7 +44,9 @@ font-family: "Poppins", sans-serif;
     animation: spining 1s linear infinite;
     -webkit-animation: spining 1s linear infinite;
 }
-
+.infoAboutMe{
+    padding:20px;
+}
 @keyframes spining {
     0% {
         transform: rotate(0deg);
@@ -1176,7 +1178,7 @@ font-family: "Poppins", sans-serif;
     width: 99%;
     position: absolute;
     height: 3px;
-    bottom: 9px;
+    bottom: 1px;
     display: block;
     background-color: var(--thrd-color);
     border-radius: 3px;
@@ -1199,7 +1201,7 @@ font-family: "Poppins", sans-serif;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
-    bottom: 8px;
+    bottom: 0;
     width: 99%;
 }
 
