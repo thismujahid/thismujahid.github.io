@@ -30,7 +30,7 @@ document.querySelector(".overlay-nav").onclick = (_) => {
     mobiNav.classList.remove("active");
 };
 //  Writer Function in Main Section
-let myJopsName = ["Front-End Developer", "Linux User", "Vue.js Developer"],
+let myJopsName = ["Front-End Developer", "CMD Friend", "Vue Developer"],
     count = 0,
     currentText = "",
     index = 0,

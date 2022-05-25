@@ -25,7 +25,12 @@
     user-zoom: none;
     font-family: "Gess";
 }
-
+.ar{
+    font-family: "Gess" !important;
+}
+.sm{
+    font-size: 12px;
+}
 a {
     color: var(--thrd-color);
 }
@@ -1311,14 +1316,14 @@ font-family: "Poppins", sans-serif;
 @media (max-width: 470px) {
     .portfolio .tabs a:last-of-type {
         display: inline-block;
-        margin: 10px 2px;
+        margin: 0 3px;
     }
 }
 
 @media (max-width: 310px) {
     .portfolio .tabs a:nth-child(2) {
         display: inline-block;
-        margin: 10px 2px;
+        margin: 0 3px;
     }
 }
 
