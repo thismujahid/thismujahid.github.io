@@ -1209,7 +1209,9 @@ font-family: "Poppins", sans-serif;
     bottom: 0;
     width: 99%;
 }
-
+.resum .additional-skills{
+    padding: 20px 0;
+}
 .resum .additional-skills .title.sub {
     margin: 43px 0px 10px 0;
 }
@@ -1749,6 +1751,9 @@ i {
 }
 
 @media(max-width:730px) {
+    .resum .certifications{
+        padding-top: 20px;
+    }
     .resum .certifications .c-boxs {
         grid-template-columns: repeat(1, 1fr);
     }
