@@ -913,11 +913,10 @@ font-family: "Poppins", sans-serif;
     color: var(--thrd-color);
     font-weight: bold;
 }
-#status-box {
-    *{
+#status-box *{
         color: var(--text-color) !important;
     }
-}
+
 #status-box p span.red{
     color: red !important;
 }
