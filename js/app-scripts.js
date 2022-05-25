@@ -51,8 +51,7 @@ let myJopsName = ["Front-End Developer", "CMD Friend", "Vue Developer"],
 })();
 // Moveing Between Sections
 let links = document.querySelectorAll(".navigator ul li a"),
-activeLink = document.querySelectorAll(".navigator ul li");
-
+    activeLink = document.querySelectorAll(".navigator ul li");
 for (let i = 0; i < links.length; i++) {
     links[i].onclick = function(e) {
         mobiNav.classList.remove("active");
@@ -208,6 +207,7 @@ var formErrors = document.querySelectorAll(".err");
 
 // };
 var form = document.getElementById("contactForm");
+    
 async function handleSubmit(event) {
     var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
@@ -314,16 +314,6 @@ prevBtn.onclick = () => {
         activeLink[start].classList.add("active");
     }
 };
-const loadedSection = document.querySelector(location.hash);
-if(loadedSection){
-    activeLink.forEach((actLink) => {
-        actLink.classList.remove("active");
-    });
-    sections.forEach((section) => {
-        section.classList.remove("active");
-    });
-    loadedSection.classList.add('active')
-}
 // Skill Width Progress
 let skillLevel = document.querySelectorAll(".counter"),
     skilProg = document.querySelectorAll(".progress");
