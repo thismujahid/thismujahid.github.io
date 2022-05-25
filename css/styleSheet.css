@@ -23,7 +23,7 @@
     margin: 0;
     box-sizing: border-box;
     user-zoom: none;
-    font-family: "Gess" !important;
+    font-family: "Gess";
 }
 
 a {
@@ -31,10 +31,15 @@ a {
 }
 
 body {
-    font-family: "Poppins", sans-serif;
     background-color: var(--main-color);
 }
+.en{
+    font-family: "Poppins", sans-serif;
+}
 
+.en *{
+font-family: "Poppins", sans-serif;
+}
 .spin {
     animation: spining 1s linear infinite;
     -webkit-animation: spining 1s linear infinite;
@@ -1761,9 +1766,6 @@ i {
     .content .about .facts .boxs {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-    }
-    .contact .contact-container {
-        display: block;
     }
     .contact .contact-container .form {
         width: 100%;
