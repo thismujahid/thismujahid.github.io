@@ -1726,14 +1726,14 @@ i {
         grid-template-columns: repeat(1, 1fr);
     }
     .resum {
-        padding: 40px 10px;
+        padding: 70px 10px;
     }
     #imgViwer #imgBox {
         height: 63%;
         width: 90%;
     }
     .contact {
-        padding: 40px 10px;
+        padding: 70px 10px;
     }
     .lds-roller {
         left: -15%;
@@ -1757,7 +1757,7 @@ i {
         grid-template-columns: repeat(2, 1fr);
     }
     .content .about {
-        padding: 40px 10px;
+        padding: 70px 10px;
     }
     .content .about .desc {
         grid-template-columns: repeat(1, 1fr);
@@ -1791,7 +1791,7 @@ i {
         width: 250px;
     }
     .portfolio {
-        padding: 40px 10px;
+        padding: 70px 10px;
     }
 }
 
