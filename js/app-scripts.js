@@ -317,7 +317,7 @@ prevBtn.onclick = () => {
         activeLink[start].classList.add("active");
     }
 };
-const secId = location.hash.replace('#', '');
+const secId = location.hash.replace('##', '');
 const loadedSection = document.getElementById(secId);
 if(loadedSection){
     sections.forEach(sec => {
