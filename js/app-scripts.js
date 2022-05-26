@@ -314,6 +314,14 @@ prevBtn.onclick = () => {
         activeLink[start].classList.add("active");
     }
 };
+const secId = location.hash.replace('#', '');
+const loadedSection = document.getElementById(secId);
+if(loadedSection){
+    sections.forEach(sec => {
+        sec.classList.remove('active');
+    })
+    loadedSection.classList.add('active');
+}
 // Skill Width Progress
 let skillLevel = document.querySelectorAll(".counter"),
     skilProg = document.querySelectorAll(".progress");
