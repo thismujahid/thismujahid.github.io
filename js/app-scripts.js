@@ -54,6 +54,7 @@ let links = document.querySelectorAll(".navigator ul li a"),
     activeLink = document.querySelectorAll(".navigator ul li");
 for (let i = 0; i < links.length; i++) {
     links[i].onclick = function(e) {
+        e.preventDefault();
         mobiNav.classList.remove("active");
         document.querySelector(".overlay-nav").classList.remove("active");
         activeLink.forEach((actLink) => {
