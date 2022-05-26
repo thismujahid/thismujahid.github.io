@@ -55,6 +55,8 @@ let links = document.querySelectorAll(".navigator ul li a"),
 for (let i = 0; i < links.length; i++) {
     links[i].onclick = function(e) {
         e.preventDefault();
+        location.hash = links[i].dataset.link;
+        document.title = 'محمد مجاهد - ' + links[i].dataset.title;
         mobiNav.classList.remove("active");
         document.querySelector(".overlay-nav").classList.remove("active");
         activeLink.forEach((actLink) => {
@@ -324,7 +326,8 @@ if(loadedSection){
     loadedSection.classList.add('active');
     links.forEach(a => {
         if(a.dataset.link == secId){
-            a.parentElement.classList.add('active')
+            a.parentElement.classList.add('active');
+        document.title = 'محمد مجاهد - ' + a.dataset.title;
         }else{
             a.parentElement.classList.remove('active')
         }
