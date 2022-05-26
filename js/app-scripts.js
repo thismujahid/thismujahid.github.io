@@ -295,6 +295,7 @@ nextBtn.onclick = (_) => {
     activeLink.forEach((actLink) => {
         actLink.classList.remove("active");
     });
+
     if (start === sectinosCount - 1) {
         start = 0;
         sections.forEach((section) => {
@@ -302,6 +303,7 @@ nextBtn.onclick = (_) => {
         });
         sections[start].classList.add("active");
         activeLink[start].classList.add("active");
+        
     } else {
         start++;
         sections.forEach((section) => {
@@ -309,14 +311,16 @@ nextBtn.onclick = (_) => {
         });
         activeLink[start].classList.add("active");
         sections[start].classList.add("active");
-        location.hash = '/'+links[start].dataset.link;
-        document.title = 'محمد مجاهد - ' + links[start].dataset.title;
+
     }
+    location.hash = '/'+links[start].dataset.link;
+    document.title = 'محمد مجاهد - ' + links[start].dataset.title;
 };
 prevBtn.onclick = () => {
     activeLink.forEach((actLink) => {
         actLink.classList.remove("active");
     });
+
     if (start === 0) {
         start = sectinosCount - 1;
         sections.forEach((section) => {
@@ -332,6 +336,8 @@ prevBtn.onclick = () => {
         sections[start].classList.add("active");
         activeLink[start].classList.add("active");
     }
+    location.hash = '/'+links[start].dataset.link;
+    document.title = 'محمد مجاهد - ' + links[start].dataset.title;
 };
 const secId = location.hash.replace('#/', '');
 const loadedSection = document.getElementById(secId);
