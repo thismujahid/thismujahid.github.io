@@ -321,6 +321,13 @@ if(loadedSection){
         sec.classList.remove('active');
     })
     loadedSection.classList.add('active');
+    links.forEach(a => {
+        if(a.dataset.link == secId){
+            a.parentElement.classList.add('active')
+        }else{
+            a.parentElement.classList.remove('active')
+        }
+    })
 }
 // Skill Width Progress
 let skillLevel = document.querySelectorAll(".counter"),
