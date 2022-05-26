@@ -309,6 +309,8 @@ nextBtn.onclick = (_) => {
         });
         activeLink[start].classList.add("active");
         sections[start].classList.add("active");
+        location.hash = '/'+links[start].dataset.link;
+        document.title = 'محمد مجاهد - ' + links[start].dataset.title;
     }
 };
 prevBtn.onclick = () => {
