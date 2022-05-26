@@ -9,6 +9,16 @@ console.log(
 );
 // End Owner Info
 // Start Zoom Profile Picture
+document.onclick = function (evt) {
+    var tgt = (evt && evt.target) || event.srcElement,
+        scr = document.body.scrollTop;
+
+    if (tgt.tagName == "A" && tgt.href.slice(-1) == "#") {
+        window.location.href = "#";
+        document.body.scrollTop = scr;           
+        return false;
+    }
+}
 let zoomer = document.getElementById("zoom"),
     profPics = document.querySelectorAll(".profPic img"),
     zoomCloser = document.querySelector("#zoom .fa-times");
