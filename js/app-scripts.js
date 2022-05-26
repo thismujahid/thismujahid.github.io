@@ -150,7 +150,7 @@ function ModePageFromLocalStorge() {
 ModePageFromLocalStorge();
 // Contact BTN In Main Section
 let contactBtn = document.getElementById("contactBtn"),
-    mainSection = document.getElementById("main"),
+    mainSection = document.getElementById("home"),
     contactSection = document.getElementById("contact");
 contactBtn.onclick = (_) => {
     mainSection.classList.remove("active");
