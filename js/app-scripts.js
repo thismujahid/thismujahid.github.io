@@ -9,16 +9,16 @@ console.log(
 );
 // End Owner Info
 // Start Zoom Profile Picture
-document.onclick = function (evt) {
-    var tgt = (evt && evt.target) || event.srcElement,
-        scr = document.body.scrollTop;
+// document.onclick = function (evt) {
+//     var tgt = (evt && evt.target) || event.srcElement,
+//         scr = document.body.scrollTop;
 
-    if (tgt.tagName == "A" && tgt.href.slice(-1) == "#") {
-        window.location.href = "#";
-        document.body.scrollTop = scr;           
-        return false;
-    }
-}
+//     if (tgt.tagName == "A" && tgt.href.slice(-1) == "#") {
+//         window.location.href = "#";
+//         document.body.scrollTop = scr;           
+//         return false;
+//     }
+// }
 let zoomer = document.getElementById("zoom"),
     profPics = document.querySelectorAll(".profPic img"),
     zoomCloser = document.querySelector("#zoom .fa-times");
@@ -65,7 +65,7 @@ let links = document.querySelectorAll(".navigator ul li a"),
 for (let i = 0; i < links.length; i++) {
     links[i].onclick = function(e) {
         e.preventDefault();
-        location.hash = links[i].dataset.link;
+        location.hash = '/'+links[i].dataset.link;
         document.title = 'محمد مجاهد - ' + links[i].dataset.title;
         mobiNav.classList.remove("active");
         document.querySelector(".overlay-nav").classList.remove("active");
@@ -327,7 +327,7 @@ prevBtn.onclick = () => {
         activeLink[start].classList.add("active");
     }
 };
-const secId = location.hash.replace('#', '');
+const secId = location.hash.replace('#/', '');
 const loadedSection = document.getElementById(secId);
 if(loadedSection){
     sections.forEach(sec => {
