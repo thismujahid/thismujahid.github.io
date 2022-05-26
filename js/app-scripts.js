@@ -223,7 +223,6 @@ var form = document.getElementById("contactForm");
     
 async function handleSubmit(event) {
     var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-
   event.preventDefault();
   var status = document.getElementById("status-box");
   var data = new FormData(event.target);
@@ -236,6 +235,7 @@ async function handleSubmit(event) {
 } else if (textArea.value == "") {
     formErrors[3].innerHTML = `<i class="fal fa-exclamation-square"></i> لايمكن ان يتم التواصل بين طرفين بدون رسائل، من فضلك ادخل رسالتك`;
 } else {
+    status.style.display = 'block'
     status.innerHTML =   `<div class="lds-roller small">
     <div></div>
     <div></div>
