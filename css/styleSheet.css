@@ -1439,8 +1439,10 @@ font-family: "Poppins", sans-serif;
     padding: 0 10px;
     color: #fff;
 }
-
-.portfolio .projects .project .info-box a {
+.portfolio .projects .project .info-box a{
+    color: var(--sub-color);
+}
+.portfolio .projects .project .info-box a.prev-btn {
     position: absolute;
     bottom: -5px;
     right: -5px;
