@@ -55,8 +55,8 @@ let links = document.querySelectorAll(".navigator ul li a"),
 for (let i = 0; i < links.length; i++) {
     links[i].onclick = function(e) {
         e.preventDefault();
-        location.hash = links[i].dataset.link.replace('#','');
-        document.title = 'محمد مجاهد - ' + links[i].dataset.title;
+        history.pushState({section: this.dataset.link.replace('#','')}, this.dataset.title, this.dataset.link.replace('#',''));
+        document.title = 'محمد مجاهد - ' + this.dataset.title;
         mobiNav.classList.remove("active");
         document.querySelector(".overlay-nav").classList.remove("active");
         activeLink.forEach((actLink) => {
@@ -317,7 +317,7 @@ prevBtn.onclick = () => {
         activeLink[start].classList.add("active");
     }
 };
-const secId = location.hash.replace('#', '');
+const secId = history.state.section;
 const loadedSection = document.getElementById(secId);
 if(loadedSection){
     sections.forEach(sec => {
