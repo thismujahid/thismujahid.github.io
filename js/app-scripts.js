@@ -255,7 +255,11 @@ async function handleSubmit(event) {
         status.innerHTML = '';
         status.style.display = 'none'
         }, 8000);
-      form.reset()
+      form.reset();
+      textAreaLabel.classList.remove("has-data");
+      fromInputs.forEach(i => {
+        i.nextElementSibling.classList.remove("has-data")
+      });
     } else {
       response.json().then(data => {
         if (Object.hasOwn(data, 'errors')) {
