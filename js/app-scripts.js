@@ -165,9 +165,12 @@ ModePageFromLocalStorge();
 let contactBtn = document.getElementById("contactBtn"),
     mainSection = document.getElementById("home"),
     contactSection = document.getElementById("contact");
-contactBtn.onclick = (_) => {
+contactBtn.onclick = (e) => {
+    e.preventDefault()
     mainSection.classList.remove("active");
     contactSection.classList.add("active");
+    location.hash = '/'+contactBtn.dataset.link;
+    document.title = 'محمد مجاهد - ' + contactBtn.dataset.title;
 };
 // Loader
 window.onload = (_) => {
