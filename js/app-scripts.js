@@ -8,6 +8,8 @@ console.log(
     `Name: ${ownerInfo.developerName}, Phone: ${ownerInfo.developerPhone}, Created Date: ${ownerInfo.createdIn}.`
 );
 // End Owner Info
+let links = document.querySelectorAll(".navigator ul li a"),
+    activeLink = document.querySelectorAll(".navigator ul li");
 // Start Zoom Profile Picture
 // document.onclick = function (evt) {
 //     var tgt = (evt && evt.target) || event.srcElement,
@@ -60,8 +62,7 @@ let myJopsName = ["Front-End Developer", "CMD Friend", "Vue Developer"],
     setTimeout(typer, 300);
 })();
 // Moveing Between Sections
-let links = document.querySelectorAll(".navigator ul li a"),
-    activeLink = document.querySelectorAll(".navigator ul li");
+
 for (let i = 0; i < links.length; i++) {
     links[i].onclick = function(e) {
         e.preventDefault();
@@ -171,6 +172,13 @@ contactBtn.onclick = (e) => {
     contactSection.classList.add("active");
     location.hash = '/'+contactBtn.dataset.link;
     document.title = 'محمد مجاهد - ' + contactBtn.dataset.title;
+    links.forEach(a => {
+        if(a.dataset.link == 'contact'){
+            a.parentElement.classList.add('active');
+        }else{
+            a.parentElement.classList.remove('active')
+        }
+    })
 };
 // Loader
 window.onload = (_) => {
