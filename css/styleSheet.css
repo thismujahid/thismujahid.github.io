@@ -688,11 +688,11 @@ font-family: "Poppins", sans-serif;
 #zoom img {
     width: 90vh;
     height: auto;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
     user-select: none;
 }
 
@@ -1406,7 +1406,7 @@ font-family: "Poppins", sans-serif;
     -ms-transition: 0.2s linear;
     -o-transition: 0.2s linear;
     width: 100%;
-    height: auto;
+    height: 80px;
     text-align: left;
     border-radius: 0 0 10px 10px;
     -webkit-border-radius: 0 0 10px 10px;
