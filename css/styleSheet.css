@@ -1432,6 +1432,7 @@ font-family: "Poppins", sans-serif;
     color: #fff;
     font-size: 20px;
     padding: 2px;
+    text-align: right;
 }
 
 .portfolio .projects .project .info-box p {
@@ -1445,7 +1446,7 @@ font-family: "Poppins", sans-serif;
 .portfolio .projects .project .info-box a.prev-btn {
     position: absolute;
     bottom: -5px;
-    right: -5px;
+    left: -5px;
     z-index: 10;
     margin: 10px;
     text-decoration: none;
