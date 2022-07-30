@@ -251,8 +251,9 @@ async function handleSubmit(event) {
 //     <div></div>
 //     <div></div>
 // </div>`
-    event.target.setAttribute('disabled', '')
-    event.target.innerText = 'جاري ارسال الرسالة...'
+const subBtn = document.getElementById('submit-btn');
+    subBtn.setAttribute('disabled', '')
+    subBtn.innerText = 'جاري ارسال الرسالة...'
     fetch(event.target.action, {
         method: form.method,
         body: data,
@@ -261,9 +262,9 @@ async function handleSubmit(event) {
     }
   }).then(response => {
     if (response.ok) {
-        event.target.innerText = 'تم ارسال الرسالة بنجاح، شكرا لك.'
+        subBtn.innerText = 'تم ارسال الرسالة بنجاح، شكرا لك.'
         setTimeout(() => {
-            event.target.innerText = 'ارسال الرسالة'
+            subBtn.innerText = 'ارسال الرسالة'
         }, 8000);
       form.reset();
       textAreaLabel.classList.remove("has-data");
