@@ -182,9 +182,7 @@ contactBtn.onclick = (e) => {
 };
 // Loader
 window.onload = (_) => {
-    setTimeout((_) => {
         document.querySelector(".lds-roller").style.display = "none";
-    }, 300);
 };
 // Textarea On Foucs Move its Label
 let textArea = document.getElementById("msg"),
@@ -246,13 +244,15 @@ async function handleSubmit(event) {
 } else if (textArea.value == "") {
     formErrors[3].innerHTML = `<i class="fal fa-exclamation-square"></i> لايمكن ان يتم التواصل بين طرفين بدون رسائل، من فضلك ادخل رسالتك`;
 } else {
-    status.style.display = 'block'
-    status.innerHTML =   `<div class="lds-roller small">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-</div>`
+//     status.style.display = 'block'
+//     status.innerHTML =   `<div class="lds-roller small">
+//     <div></div>
+//     <div></div>
+//     <div></div>
+//     <div></div>
+// </div>`
+    event.target.setAttribute('disabled', '')
+    event.target.innerText = 'جاري ارسال الرسالة...'
     fetch(event.target.action, {
         method: form.method,
         body: data,
@@ -261,10 +261,9 @@ async function handleSubmit(event) {
     }
   }).then(response => {
     if (response.ok) {
-        status.innerHTML = `<p><span>شكرا...</span> لقد استلمت رسالتك سأقوم بالرد في غضون دقائق معدوده😃❤.</p>`;
+        event.target.innerText = 'تم ارسال الرسالة بنجاح، شكرا لك.'
         setTimeout(() => {
-        status.innerHTML = '';
-        status.style.display = 'none'
+            event.target.innerText = 'ارسال الرسالة'
         }, 8000);
       form.reset();
       textAreaLabel.classList.remove("has-data");
