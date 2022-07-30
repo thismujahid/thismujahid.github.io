@@ -236,6 +236,7 @@ async function handleSubmit(event) {
           subBtn.value = "تم ارسال الرسالة بنجاح، شكرا لك.";
           setTimeout(() => {
             subBtn.value = "ارسال الرسالة";
+            subBtn.removeAttribute("disabled");
           }, 8000);
           form.reset();
           textAreaLabel.classList.remove("has-data");
