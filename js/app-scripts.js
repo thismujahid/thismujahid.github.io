@@ -18,7 +18,7 @@ for (let i = 0; i < profPics.length; i++) {
 zoomCloser.onclick = (_) => zoomer.classList.remove("active");
 
 //  Writer Function in Main Section
-let myJopsName = ["Hey there 👋", "Javascript Developer", "Typescript Developer", "Vue/Nuxt Developer"],
+let myJopsName = ["Web Developer", "TypeScript/JavaScript Developer", "Vue/Nuxt Developer"],
   count = 0,
   currentText = "",
   index = 0,
@@ -29,7 +29,7 @@ let myJopsName = ["Hey there 👋", "Javascript Developer", "Typescript Develope
   }
   currentText = myJopsName[count];
   letter = currentText.slice(0, ++index);
-  document.querySelector(".writerInDesk").textContent = letter;
+  document.getElementById("writeIn").textContent = letter;
 
   if (letter.length === currentText.length) {
     count++;
@@ -106,25 +106,6 @@ function toggleMode(options = {}) {
 }
 toggleMode({ noUpdateMode: true });
 
-
-// Contact BTN In Main Section
-let contactBtn = document.getElementById("contactBtn"),
-  mainSection = document.getElementById("home"),
-  contactSection = document.getElementById("contact");
-contactBtn.onclick = (e) => {
-  e.preventDefault();
-  mainSection.classList.remove("active");
-  contactSection.classList.add("active");
-  location.hash = "/" + contactBtn.dataset.link;
-  document.title = "محمد مجاهد - " + contactBtn.dataset.title;
-  links.forEach((a) => {
-    if (a.dataset.link == "contact") {
-      a.parentElement.classList.add("active");
-    } else {
-      a.parentElement.classList.remove("active");
-    }
-  });
-};
 // Loader
 window.onload = (_) => {
   setTimeout(() => {
@@ -171,17 +152,17 @@ async function handleSubmit(event) {
   var status = document.getElementById("status-box");
   var data = new FormData(event.target);
   if (fromInputs[0].value == "") {
-    formErrors[0].innerHTML = `<i class="fal fa-exclamation-square"></i> رجاء كتابة اسمك اولا`;
+    formErrors[0].innerHTML = `Please enter your name`;
   } else if (fromInputs[1].value == "") {
-    formErrors[1].innerHTML = `<i class="fal fa-exclamation-square"></i> من فضلك ادخل بريدك الالكتروني وتأكد من انه صحيح `;
+    formErrors[1].innerHTML = `Please enter your E-mail`;
   } else if (fromInputs[2].value == "") {
-    formErrors[2].innerHTML = `<i class="fal fa-exclamation-square"></i> يرجي ادخال الموضوع لتوضيح سبب التواصل بشكل افضل`;
+    formErrors[2].innerHTML = `Please enter subject`;
   } else if (textArea.value == "") {
-    formErrors[3].innerHTML = `<i class="fal fa-exclamation-square"></i> لايمكن ان يتم التواصل بين طرفين بدون رسائل، من فضلك ادخل رسالتك`;
+    formErrors[3].innerHTML = `Please Enter Your message`;
   } else {
     const subBtn = document.getElementById("submit-btn");
     subBtn.setAttribute("disabled", "");
-    subBtn.value = "جاري ارسال الرسالة...";
+    subBtn.value = "Sending your message...";
     fetch(event.target.action, {
       method: form.method,
       body: data,
@@ -191,9 +172,9 @@ async function handleSubmit(event) {
     })
       .then((response) => {
         if (response.ok) {
-          subBtn.value = "تم ارسال الرسالة بنجاح، شكرا لك.";
+          subBtn.value = "Message sent successfully, thanks 😃";
           setTimeout(() => {
-            subBtn.value = "ارسال الرسالة";
+            subBtn.value = "Send message";
             subBtn.removeAttribute("disabled");
           }, 8000);
           form.reset();
@@ -208,7 +189,7 @@ async function handleSubmit(event) {
                 .map((error) => error["message"])
                 .join(", ");
             } else {
-              status.innerHTML = `<p><span class='red'>للأسف... </span> حدث خطأ اثناء ارسال الرسالة من فضلك حاول مجددا.</p>`;
+              status.innerHTML = `<p><span class='red'>Opps...</span> something bad happend, please try again.</p>`;
               setTimeout(() => {
                 status.innerHTML = "";
                 status.style.display = "none";
@@ -218,8 +199,7 @@ async function handleSubmit(event) {
         }
       })
       .catch((error) => {
-        console.log(error);
-        status.innerHTML = `<p><span class='red'>للأسف... </span> حدث خطأ اثناء ارسال الرسالة من فضلك حاول مجددا.</p>`;
+        status.innerHTML = `<p><span class='red'>Opps...</span> something bad happend, please try again.</p>`;
         setTimeout(() => {
           status.innerHTML = "";
           status.style.display = "none";
@@ -235,47 +215,4 @@ let vueCounter = document.querySelector(".counter.vue");
 vueCounter.innerText = Math.ceil((600 * 100) / 670);
 for (let i = 0; i < skillLevel.length; i++) {
   skilProg[i].style.width = skillLevel[i].textContent - 2 + ".3" + "%";
-}
-
-// Portfolio Filter
-let tabs = document.querySelectorAll(".tabs a"),
-  projects = document.querySelectorAll(".projects .project"),
-  vueProjects = document.querySelectorAll(".projects .project.vue"),
-  frontProjects = document.querySelectorAll(".projects .project.front");
-
-document.getElementById("allCount").innerText = projects.length;
-document.getElementById("uiCount").innerText = vueProjects.length;
-document.getElementById("frontCount").innerText = frontProjects.length;
-for (let t = 0; t < tabs.length; t++) {
-  tabs[t].onclick = () => {
-    tabs.forEach((tab) => {
-      tab.classList.remove("active");
-      tabs[t].classList.add("active");
-    });
-    if (tabs[t].classList.contains("all")) {
-      projects.forEach((project) => {
-        project.classList.add("active");
-      });
-    } else if (tabs[t].classList.contains("ui")) {
-      projects.forEach((project) => {
-        project.classList.remove("active");
-      });
-      frontProjects.forEach((frontProject) => {
-        frontProject.classList.remove("active");
-      });
-      vueProjects.forEach((uiProject) => {
-        uiProject.classList.add("active");
-      });
-    } else if (tabs[t].classList.contains("front")) {
-      projects.forEach((project) => {
-        project.classList.remove("active");
-      });
-      vueProjects.forEach((uiProject) => {
-        uiProject.classList.remove("active");
-      });
-      frontProjects.forEach((frontProject) => {
-        frontProject.classList.add("active");
-      });
-    }
-  };
 }
