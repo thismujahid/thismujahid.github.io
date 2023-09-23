@@ -8,22 +8,21 @@
     <meta name="viewport" cony>
     <meta property="twitter:url" content="https://thismujahid.com/">
     <meta property="og:url" content="https://thismujahid.com/">
-	<meta property="og:type" content="profile">
-	<meta property="og:locale" content="English">
-	<meta property="og:title" content="Muhammad Ibrahim Mujahid">
-	<meta property="twitter:card" content="summary">
-	<meta property="og:description" content="Front-end Web Developer">
-	<meta property="twitter:description" content="Front-end Web Developer">
-	<meta property="og:image" content="./imgs/photo.jpg">
-	<meta property="twitter:image" content="./imgs/photo.jpg">
+    <meta property="og:type" content="profile">
+    <meta property="og:locale" content="English">
+    <meta property="og:title" content="Muhammad Ibrahim Mujahid">
+    <meta property="twitter:card" content="summary">
+    <meta property="og:description" content="Front-end Web Developer">
+    <meta property="twitter:description" content="Front-end Web Developer">
+    <meta property="og:image" content="./imgs/photo.jpg">
+    <meta property="twitter:image" content="./imgs/photo.jpg">
     <meta name="twitter:title" content="Muhammad Ibrahim Mujahid" />
-	<meta property="fb:app_id" content="1thismujahid">
-	<meta property="og:image:width" content="100%">
-	<meta property="og:image:height" content="100%">
-	<meta name="author" content="Muhammad Ibrahim Mujahid">
+    <meta property="fb:app_id" content="1thismujahid">
+    <meta property="og:image:width" content="100%">
+    <meta property="og:image:height" content="100%">
+    <meta name="author" content="Muhammad Ibrahim Mujahid">
     <meta name="robots" content="index, follow">
-        <title>Muhammad Mujahid</title>
-    <link rel="stylesheet" href="css/all.min.css">
+    <title>Muhammad Mujahid</title>
     <link rel="stylesheet" href="css/styleSheet.css">
     <link rel="icon" href="imgs/icon.svg" type="image/svg" sizes="50x50">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -41,114 +40,29 @@
         <div></div>
         <div></div>
     </div>
-    <div class="fly-box">
-        <div class="prev" title="Previous"><i class="fal fa-arrow-left"></i></div>
-        <div class="darkMode desk" id="darkMode" title="Toggle Mode">
-            <i class="fal fa-sun active"></i>
-        </div>
-        <div class="next" title="Next"><i class="fal fa-arrow-right"></i></div>
-    </div>
+    <button class="mode-toggler" id="modeToggler" role="button">
+        <svg class="light" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+        </svg>
+        <svg class="dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+        </svg>
+
+    </button>
     <div class="container">
         <div id="imgViwer">
             <i class="fal fa-times-hexagon closer" id="imgVwerCloser"></i>
             <img src="" id="imgBox">
         </div>
-        <i class="fal fa-bars" id="openNav"></i>
-        <div class="navigator desktop" id="desktop">
-            <ul>
-                <li class="active">
-                    <a href="#home" data-link="home" data-title="الرئيسية"><i class="fal fa-home"></i> <br/>الرئيسية</a>
-                </li>
-                <li>
-                    <a href="#about" data-link="about" data-title="من انا"><i class="fal fa-user"></i></br> من انا</a>
-                </li>
-                <li>
-                    <a href="#resume" data-link="resume" data-title="السيرة الذاتية"><i class="fal fa-graduation-cap"></i><br/> السيرة الذاتية</a>
-                </li>
-                <li>
-                    <a href="#portfolio" data-link="portfolio" data-title="المشاريع"><i class="fal fa-briefcase"></i><br/> المشاريع</a>
-                </li>
-                <li>
-                    <a href="#contact" data-link="contact" data-title="تواصل معي"><i class="fal fa-envelope"></i><br/> تواصل معي</a>
-                </li>
-            </ul>
-        </div>
-        <div class="overlay-nav"></div>
-        <div class="navigator mobile" id="mobile">
-
-            <div class="info profPic">
-                <img src="imgs/photo.jpg" alt="Mohamed Mujahid">
-            </div>
-            <div class="info">
-                <h2>محمد مجاهد</h2>
-                <p class="en">Front-end Developer</p>
-            </div>
-            <div class="socila">
-                <a href="https://instagram.com/thismujahid" title="instagram Account" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://facebook.com/thismujahid" title="Facebook Account" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.linkedin.com/in/thismujahid" title="Linkedin Account" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://t.me/thismujahid" title="Telegram Account" target="_blank"><i class="fab fa-telegram"></i></a>
-                <a href="https://wa.me/2001151547569" title="Whatsapp Account" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://github.com/thismujahid" title="GitHub Account" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
-            <ul>
-                <li class="active">
-                    <a href="#home" data-link="home" data-title="الرئيسية"><i class="fal fa-home"></i> <br/> الرئيسية</a>
-                </li>
-                <li>
-                    <a href="#about" data-link="about" data-title="من انا"><i class="fal fa-user"></i></br> عني</a>
-                </li>
-                <li>
-                    <a href="#resume" data-link="resume" data-title="السيرة الذاتية"><i class="fal fa-graduation-cap"></i><br/> السيرة الذاتية</a>
-                </li>
-                <li>
-                    <a href="#portfolio" data-link="portfolio" data-title="المشاريع"><i class="fal fa-briefcase"></i><br/> المشاريع</a>
-                </li>
-                <li>
-                    <a href="#contact" data-link="contact" data-title="تواصل معي"><i class="fal fa-envelope"></i><br/> تواصل معي</a>
-                </li>
-            </ul>
-        </div>
         <div id="zoom">
             <i class="fal fa-times"></i>
             <img src="imgs/photo.jpg" alt="Mohammed Ibrahim Mujahid Photo">
         </div>
-        <div class="prof-info">
-            <div class="info-container ">
-                <span class="block profPic">
-                    <img src="imgs/photo.jpg" alt="Mohammed Ibrahim Mujahid Photo">
-                </span>
-                <h2>محمد مجاهد</h2>
-                <p class="en">Front-end Developer</p>
-                <div class="socila">
-                    <a href="https://instagram.com/thismujahid" title="instagram Account" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://facebook.com/1thismujahid" title="Facebook Account" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/in/thismujahid" title="Linkedin Account" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://t.me/thismujahid" title="Telegram Account" target="_blank"><i class="fab fa-telegram"></i></a>
-                    <a href="https://wa.me/2001151547569" title="Whatsapp Account" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://github.com/thismujahid" title="GitHub Account" target="_blank"><i class="fab fa-github"></i></a>
-                </div>
-                <div class="contact-info">
-                    <p>
-
-                        <a href="tel:+2001151547569">
-                            <i class="fal fa-phone-alt"></i> <strong class="en" dir="ltr"> +20 01151547569 </strong><br/>
-                        </a>
-                    </p>
-                    <p>
-                        <a href="mailto:mohamed.mojahead@gmail.com">
-                            <span title="mohamed.mojahead@gmail.com"><i class="fal fa-envelope"></i> <strong class="en" dir="ltr"> mohamed.mojahead@gmail.com </strong></span> </br>
-                        </a>
-                    </p>
-                    <!-- <p>
-                        <i class="fal fa-map-marked-alt"></i> الجيزة، مصر</br>
-                    </p> -->
-                    <!-- <p>
-                        <i class="fal fa-language"></i> اللغات: عربي - English
-                    </p> -->
-                </div>
-            </div>
-        </div>
+       
         <div class="content">
             <div class="content-loader">
                 <i class="fa fa-spinner spin" aria-hidden="true"></i>
@@ -168,16 +82,16 @@
             </div>
             <div class="about mainLink" id="about" data-link="#about">
                 <div class="title both">
-                    <h1>من  <span>انا</span></h1>
+                    <h1>من <span>انا</span></h1>
                 </div>
                 <div class="desc">
                     <div class="paragraph">
-                        مطور ويب (front-end) محترف تستطيع الاعتماد عليه في تحويل فكرتك الي منتج رقمي ذو جودة عاليه 
+                        مطور ويب (front-end) محترف تستطيع الاعتماد عليه في تحويل فكرتك الي منتج رقمي ذو جودة عاليه
                     </div>
                     <div class="infoAboutMe">
-                        <span>السن:</span > <strong class="en"> 22</strong> </br>
+                        <span>السن:</span> <strong class="en"> 22</strong> </br>
                         <!-- <span>العنوان </span>منشأة القناطر - امبابة - الجيزة <br> -->
-                        <span>الهاتف:</span > <strong class="en" dir="ltr"> +20 01151547569</strong> <br>
+                        <span>الهاتف:</span> <strong class="en" dir="ltr"> +20 01151547569</strong> <br>
                         <span>الخبره:</span> <strong> سنتان </strong>
                     </div>
                 </div>
@@ -189,28 +103,32 @@
                         <div class="block">
                             <i class="fas fa-store"></i>
                             <h3><b>المتاجر الالكترونية</b></h3>
-                            <p> التجارة الإلكترونية مهمة جدًا لمنتجاتك ، دعني اساعدك في الحصول على متجرك الرقمي عبر الإنترنت.</p>
+                            <p> التجارة الإلكترونية مهمة جدًا لمنتجاتك ، دعني اساعدك في الحصول على متجرك الرقمي عبر
+                                الإنترنت.</p>
                         </div>
                         <div class="block">
                             <i class="fal fa-browser"></i>
                             <h3><b>مواقع تعريفية</b></h3>
-                            <p>الصفحة التعريفية (Landing Page) إنها اختيار بسيط وجيد للشركات الناشئة والشركات الصغيرة ، دعني أقدم لك معلومات حول ذلك</p>
+                            <p>الصفحة التعريفية (Landing Page) إنها اختيار بسيط وجيد للشركات الناشئة والشركات الصغيرة ،
+                                دعني أقدم لك معلومات حول ذلك</p>
                         </div>
                         <div class="block">
                             <i class="fad fa-users-class"></i>
                             <h3><b>المنصات</b></h3>
-                            <p>هل أنت مدرس أو مدرب ، تعبت من الأماكن المستأجرة لعمل دورة رائعة في مجالك ، دعني أساعدك في حجز مكان مخصص لك لتكون تحت يدك وقتما تريد استخدامه ، وداعًا لمضيعة الوقت والمال.</p>
+                            <p>هل أنت مدرس أو مدرب ، تعبت من الأماكن المستأجرة لعمل دورة رائعة في مجالك ، دعني أساعدك في
+                                حجز مكان مخصص لك لتكون تحت يدك وقتما تريد استخدامه ، وداعًا لمضيعة الوقت والمال.</p>
                         </div>
                         <div class="block">
                             <i class="fal fa-file-code"></i>
                             <h3><b>تطبيقات ويب والمزيد</b></h3>
-                            <p>بناء التطبيقات الخاصه والبرمجيات المفتوحة المصدر بأحدث التقنيات واللغات في عالم الويب الرائع. الق نظرة على أعمالي. </p>
+                            <p>بناء التطبيقات الخاصه والبرمجيات المفتوحة المصدر بأحدث التقنيات واللغات في عالم الويب
+                                الرائع. الق نظرة على أعمالي. </p>
                         </div>
                     </div>
                 </div>
                 <div class="facts">
                     <div class="title sub">
-                        <h2>حقائق  <span>ممتعه</span></h2>
+                        <h2>حقائق <span>ممتعه</span></h2>
                     </div>
                     <div class="boxs">
                         <div class="block">
@@ -255,7 +173,8 @@
                                 <div class="right-part">
                                     <h3>كلية الدعوة الاسلامية جامعة الازهر الشريف</h3>
                                     <p>
-                                        طالب بكلية الدهوة الاسلامية بجامعة الازهر الشريف بالفرقة الثالثة، احب مجال عملي ومجال دراستي.
+                                        طالب بكلية الدهوة الاسلامية بجامعة الازهر الشريف بالفرقة الثالثة، احب مجال عملي
+                                        ومجال دراستي.
                                     </p>
                                 </div>
                             </div>
@@ -277,7 +196,9 @@
                                 <div class="right-part">
                                     <h3>مطور ويب (front-end)</h3>
                                     <p>
-                                        في بداية مسيرتي في عالم تطوير الويب كنت اعمل كمستقل التعامل مع العملاء بنفسي وتسليم المشاريع في وقتها المحدد لقد كانت فترة رائعه لكسب المزيد من الخبره التقنية والفنية
+                                        في بداية مسيرتي في عالم تطوير الويب كنت اعمل كمستقل التعامل مع العملاء بنفسي
+                                        وتسليم المشاريع في وقتها المحدد لقد كانت فترة رائعه لكسب المزيد من الخبره
+                                        التقنية والفنية
                                     </p>
                                 </div>
                             </div>
@@ -295,7 +216,8 @@
                                 </div>
                                 <div class="right-part">
                                     <h3>مطور ويب (front-end)</h3>
-                                    <p>حاليا اعمل في شركة إنتجريت للحلول التقنية (Optivius) واكتسب المزيد من الخبرة مع فريق وبيئة عمل رائعة
+                                    <p>حاليا اعمل في شركة إنتجريت للحلول التقنية (Optivius) واكتسب المزيد من الخبرة مع
+                                        فريق وبيئة عمل رائعة
                                     </p>
                                 </div>
                             </div>
@@ -305,7 +227,11 @@
                                 <h2>خبرات اخري</h2>
                             </div>
                             <div class="knowledges">
-                                <span class="en">Regular expression</span><span class="en">Desgin Patterns</span><span>تحسين محركات البحث</span><span class="en">Validation</span><span>ادارة الوقت</span> <span>التعلم الذاتي</span><span>صديق للـCMD</span><span class="en">Clean Code</span><span>العمل تحت ضغط</span> <span class="en">Adobe XD && UI/UX Consept</span>
+                                <span class="en">Regular expression</span><span class="en">Desgin
+                                    Patterns</span><span>تحسين محركات البحث</span><span
+                                    class="en">Validation</span><span>ادارة الوقت</span> <span>التعلم
+                                    الذاتي</span><span>صديق للـCMD</span><span class="en">Clean Code</span><span>العمل
+                                    تحت ضغط</span> <span class="en">Adobe XD && UI/UX Consept</span>
                             </div>
                         </div>
                     </div>
@@ -431,11 +357,15 @@
                             </div>
                             <div class="info-box">
                                 <div>
-                                    <p><span>الاسم:</span > <i class="en">  HTML & CSS</i></p>
-                                    <p><span>رابط التحقق:</span> <a href="https://maharatech.gov.eg/mod/customcert/verify_certificate.php?contextid=35649&code=ruWQ8sKq0j&qrcode=1" target="_blank">فتح</a></p>
-                                    <p><span>التاريخ:</span > <i class="en"> 5/12/2020</i></p>
-                                    <p title="Information Technology Institute"><span>المصدر:</span>  <i class="en"> ITI</i></p>
-                                    <p><span>معاينة: <a href="./pdf/html&css.pdf" target="_blank" title="HTML and CSS Course Certificate">فتح</a></span></p>
+                                    <p><span>الاسم:</span> <i class="en"> HTML & CSS</i></p>
+                                    <p><span>رابط التحقق:</span> <a
+                                            href="https://maharatech.gov.eg/mod/customcert/verify_certificate.php?contextid=35649&code=ruWQ8sKq0j&qrcode=1"
+                                            target="_blank">فتح</a></p>
+                                    <p><span>التاريخ:</span> <i class="en"> 5/12/2020</i></p>
+                                    <p title="Information Technology Institute"><span>المصدر:</span> <i class="en">
+                                            ITI</i></p>
+                                    <p><span>معاينة: <a href="./pdf/html&css.pdf" target="_blank"
+                                                title="HTML and CSS Course Certificate">فتح</a></span></p>
                                 </div>
                             </div>
                         </div>
@@ -445,11 +375,15 @@
                             </div>
                             <div class="info-box">
                                 <div>
-                                    <p><span>الاسم:</span > <i class="en">  Javascript</i></p>
-                                    <p><span>رابط التحقق:</span> <a href="https://maharatech.gov.eg/mod/customcert/verify_certificate.php?contextid=162768&code=Z6iHHrfMkL&qrcode=1" target="_blank">فتح</a></p>
-                                    <p><span>التاريخ:</span > <i class="en"> 2/2/2021</i></p>
-                                    <p title="Information Technology Institute"><span>المصدر:</span> <i class="en"> ITI</i></p>
-                                    <p><span>معاينة: <a href="./pdf/js.pdf" target="_blank" title="Javascript Course Certificate">فتح</a></span></p>
+                                    <p><span>الاسم:</span> <i class="en"> Javascript</i></p>
+                                    <p><span>رابط التحقق:</span> <a
+                                            href="https://maharatech.gov.eg/mod/customcert/verify_certificate.php?contextid=162768&code=Z6iHHrfMkL&qrcode=1"
+                                            target="_blank">فتح</a></p>
+                                    <p><span>التاريخ:</span> <i class="en"> 2/2/2021</i></p>
+                                    <p title="Information Technology Institute"><span>المصدر:</span> <i class="en">
+                                            ITI</i></p>
+                                    <p><span>معاينة: <a href="./pdf/js.pdf" target="_blank"
+                                                title="Javascript Course Certificate">فتح</a></span></p>
                                 </div>
                             </div>
                         </div>
@@ -459,11 +393,15 @@
                             </div>
                             <div class="info-box">
                                 <div>
-                                    <p><span>الاسم:</span > <i class="en">  TypeScript</i></p>
-                                    <p><span>رابط التحقق:</span> <a href="https://maharatech.gov.eg/mod/customcert/verify_certificate.php?contextid=253403&code=gUfFhgQzPm&qrcode=1" target="_blank">فتح</a></p>
-                                    <p><span>التاريخ:</span > <i class="en"> 25/3/2021</i></p>
-                                    <p title="Information Technology Institute"><span>المصدر:</span> <i class="en"> ITI</i></p>
-                                    <p><span>معاينة: <a href="./pdf/ts.pdf" target="_blank" title="Typescript Course Certificate">فتح</a></span></p>
+                                    <p><span>الاسم:</span> <i class="en"> TypeScript</i></p>
+                                    <p><span>رابط التحقق:</span> <a
+                                            href="https://maharatech.gov.eg/mod/customcert/verify_certificate.php?contextid=253403&code=gUfFhgQzPm&qrcode=1"
+                                            target="_blank">فتح</a></p>
+                                    <p><span>التاريخ:</span> <i class="en"> 25/3/2021</i></p>
+                                    <p title="Information Technology Institute"><span>المصدر:</span> <i class="en">
+                                            ITI</i></p>
+                                    <p><span>معاينة: <a href="./pdf/ts.pdf" target="_blank"
+                                                title="Typescript Course Certificate">فتح</a></span></p>
                                 </div>
                             </div>
                         </div>
@@ -473,11 +411,15 @@
                             </div>
                             <div class="info-box">
                                 <div>
-                                    <p><span>الاسم:</span > <i class="en">  ECMAScript</i> 6</p>
-                                    <p><span>رابط التحقق:</span> <a href="https://maharatech.gov.eg/mod/customcert/verify_certificate.php?contextid=206156&code=voNQ8NNU5M&qrcode=1" target="_blank">فتح</a></p>
-                                    <p><span>التاريخ:</span > <i class="en"> 7/3/2021</i></p>
-                                    <p title="Information Technology Institute"><span>المصدر:</span> <i class="en"> ITI</i></p>
-                                    <p><span>معاينة: <a href="./pdf/ES6.pdf" target="_blank" title="Typescript Course Certificate">فتح</a></span></p>
+                                    <p><span>الاسم:</span> <i class="en"> ECMAScript</i> 6</p>
+                                    <p><span>رابط التحقق:</span> <a
+                                            href="https://maharatech.gov.eg/mod/customcert/verify_certificate.php?contextid=206156&code=voNQ8NNU5M&qrcode=1"
+                                            target="_blank">فتح</a></p>
+                                    <p><span>التاريخ:</span> <i class="en"> 7/3/2021</i></p>
+                                    <p title="Information Technology Institute"><span>المصدر:</span> <i class="en">
+                                            ITI</i></p>
+                                    <p><span>معاينة: <a href="./pdf/ES6.pdf" target="_blank"
+                                                title="Typescript Course Certificate">فتح</a></span></p>
                                 </div>
                             </div>
                         </div>
@@ -487,10 +429,14 @@
                             </div>
                             <div class="info-box">
                                 <div>
-                                    <p title="User Interface & User Exprince Desgin"><span>الاسم:</span > <i class="en"> UI/UXD</i></p>
-                                    <p><span>Verify Link:</span> <a href="https://maharatech.رابط التحقق/mod/customcert/verify_certificate.php?contextid=282311&code=2s5bX9IY2M&qrcode=1">فتح</a></p>
-                                    <p><span>التاريخ:</span > <i class="en"> 15/6/2021</i></p>
-                                    <p title="Iformation Technology Institute"><span>المصدر:</span> <i class="en"> ITI</i></p>
+                                    <p title="User Interface & User Exprince Desgin"><span>الاسم:</span> <i class="en">
+                                            UI/UXD</i></p>
+                                    <p><span>Verify Link:</span> <a
+                                            href="https://maharatech.رابط التحقق/mod/customcert/verify_certificate.php?contextid=282311&code=2s5bX9IY2M&qrcode=1">فتح</a>
+                                    </p>
+                                    <p><span>التاريخ:</span> <i class="en"> 15/6/2021</i></p>
+                                    <p title="Iformation Technology Institute"><span>المصدر:</span> <i class="en">
+                                            ITI</i></p>
                                     <p><span>معاينة: <a href="./pdf/uxd.pdf" target="_blank">فتح</a></span></p>
                                 </div>
                             </div>
@@ -501,9 +447,11 @@
                             </div>
                             <div class="info-box">
                                 <div>
-                                    <p><span>الاسم:</span > <i class="en">  Adobe XD</i></p>
-                                    <p><span>رابط التحقق: </span><a href="https://www.udemy.com/certificate/UC-e0b89fc6-7240-404b-b9f1-0e52502b5c70/" target="_blank">Udemy</a></p>
-                                    <p><span>التاريخ:</span > <i class="en"> 25/6/2021</i></p>
+                                    <p><span>الاسم:</span> <i class="en"> Adobe XD</i></p>
+                                    <p><span>رابط التحقق: </span><a
+                                            href="https://www.udemy.com/certificate/UC-e0b89fc6-7240-404b-b9f1-0e52502b5c70/"
+                                            target="_blank">Udemy</a></p>
+                                    <p><span>التاريخ:</span> <i class="en"> 25/6/2021</i></p>
                                     <p><span>المصدر:</span> <i class="en">Udemy</i></p>
                                     <p><span>معاينة: <a href="./pdf/xd.pdf" target="_blank">فتح</a></span></p>
                                 </div>
@@ -515,9 +463,11 @@
                             </div>
                             <div class="info-box">
                                 <div>
-                                    <p><span>الاسم:</span > <i class="en">  Vue.JS</i></p>
-                                    <p><span>رابط التحقق: </span><a href="https://www.udemy.com/certificate/UC-9f301eff-5a80-44c5-89a9-5105f2c7f68b/" target="_blank">Udemy</a></p>
-                                    <p><span>التاريخ:</span > <i class="en"> 16/10/2021</i></p>
+                                    <p><span>الاسم:</span> <i class="en"> Vue.JS</i></p>
+                                    <p><span>رابط التحقق: </span><a
+                                            href="https://www.udemy.com/certificate/UC-9f301eff-5a80-44c5-89a9-5105f2c7f68b/"
+                                            target="_blank">Udemy</a></p>
+                                    <p><span>التاريخ:</span> <i class="en"> 16/10/2021</i></p>
                                     <p><span>المصدر:</span> <i class="en">Udemy</i></p>
                                     <p><span>معاينة: <a href="./pdf/vue.pdf" target="_blank">فتح</a></span></p>
                                 </div>
@@ -531,8 +481,8 @@
                     <h1>المشاريع </h1>
                 </div>
                 <div class="tabs">
-                    <a class="all active pointer">الكل (<span id="allCount" ></span>)</a>
-                    <a class="front pointer">المشاريع العادية (<span id="frontCount" ></span>)</a>
+                    <a class="all active pointer">الكل (<span id="allCount"></span>)</a>
+                    <a class="front pointer">المشاريع العادية (<span id="frontCount"></span>)</a>
                     <a class="ui pointer">مشاريع <span class="en sm">(Vue)</span> (<span id="uiCount"></span>)</a>
                 </div>
                 <div class="projects">
@@ -560,16 +510,17 @@
                         </div>
                         <div class="info-box">
                             <h3>دكان مارت</h3>
-                            <a href="https://dokanmart.com" onclick="(e)=> e.preventDefault()" class="prev-btn" target="_blank">معاينة </a>
+                            <a href="https://dokanmart.com" onclick="(e)=> e.preventDefault()" class="prev-btn"
+                                target="_blank">معاينة </a>
                         </div>
-                    </div> 
+                    </div>
                     <div class="project all active vue">
                         <div class="img-box">
                             <img src="imgs/optivius.png" alt="Project">
                         </div>
                         <div class="info-box">
                             <h3>Optivius</h3>
-                            
+
                             <a href="https://optivius.com/" class="prev-btn" target="_blank">معاينة</a>
                         </div>
                     </div>
@@ -579,7 +530,7 @@
                         </div>
                         <div class="info-box">
                             <h3>Digitaleka</h3>
-                            
+
                             <a href="https://digitaleka.de/" class="prev-btn" target="_blank">معاينة</a>
                         </div>
                     </div>
@@ -591,17 +542,17 @@
                             <h3>صورنا</h3>
                             <a href="http://sowarna.com" class="prev-btn" target="_blank">معاينة</a>
                         </div>
-                    </div>   
+                    </div>
                     <div class="project all active vue">
                         <div class="img-box">
                             <img src="imgs/Die Sprachbruke.png" alt="Project">
                         </div>
                         <div class="info-box">
                             <h3>الجسر اللغوي</h3>
-                            
+
                             <a href="http://sprach.digitaleka.com/" class="prev-btn" target="_blank">معاينة</a>
                         </div>
-                    </div>                    
+                    </div>
                     <div class="project all active vue">
                         <div class="img-box">
                             <img src="imgs/Strata.png" alt="Project">
@@ -617,7 +568,7 @@
                         </div>
                         <div class="info-box">
                             <h3>قناه لخدمات الصرف الصحي</h3>
-                            
+
                             <a href="https://gk-kanalservice24.de/" class="prev-btn" target="_blank">معاينة</a>
                         </div>
                     </div>
@@ -639,7 +590,7 @@
                         </div>
                         <div class="info-box">
                             <h3>تطبيق اسئله</h3>
-                            
+
                             <a href="https://ques-app.netlify.app" class="prev-btn" target="_blank">معاينة</a>
                         </div>
                     </div>
@@ -687,8 +638,9 @@
                         </div>
                         <div class="info-box">
                             <h3>Coding BootCamp website</h3>
-                     
-                            <a href="https://thismujahid.github.io/coding-bootcamp/" class="prev-btn" target="_blank">معاينة</a>
+
+                            <a href="https://thismujahid.github.io/coding-bootcamp/" class="prev-btn"
+                                target="_blank">معاينة</a>
                         </div>
                     </div>
                     <!-- <div class="project all active front">
@@ -706,8 +658,9 @@
                         </div>
                         <div class="info-box">
                             <h3>مدرسة الفصحى</h3>
-        
-                            <a href="https://thismujahid.github.io/fusha/" class="prev-btn" target="_blank">(لم يتم تسليمه) معاينة</a>
+
+                            <a href="https://thismujahid.github.io/fusha/" class="prev-btn" target="_blank">(لم يتم
+                                تسليمه) معاينة</a>
                         </div>
                     </div>
                     <div class="project all active front">
@@ -716,8 +669,9 @@
                         </div>
                         <div class="info-box">
                             <h3>ترافيلوا (للسفر)</h3>
-        
-                            <a href="https://thismujahid.github.io/Travelo" class="prev-btn" target="_blank">(لم يتم تسليمه) معاينة</a>
+
+                            <a href="https://thismujahid.github.io/Travelo" class="prev-btn" target="_blank">(لم يتم
+                                تسليمه) معاينة</a>
                         </div>
                     </div>
                     <div class="project all active front">
@@ -726,7 +680,7 @@
                         </div>
                         <div class="info-box">
                             <h3>ايات قرانيه</h3>
-                            
+
                             <a href="https://thismujahid.github.io/ayat" class="prev-btn" target="_blank">معاينة</a>
                         </div>
                     </div>
@@ -745,7 +699,7 @@
                 <div class="contact-container">
                     <div class="form">
                         <div class="title sub">
-                            <h2>لا تترد في  <span> ترك رسالة 💌😊</span></h2>
+                            <h2>لا تترد في <span> ترك رسالة 💌😊</span></h2>
                         </div>
                         <form action="https://formspree.io/f/myyoogkl" method="POST" id="contactForm">
                             <div class="custom">
@@ -774,6 +728,67 @@
                             <input type="submit" value="ارسال الرسالة" class="ar " id="submit-btn">
                     </div>
                     </form>
+                </div>
+            </div>
+        </div>
+        <div class="prof-info">
+            <div class="info-container ">
+                <span class="block profPic">
+                    <img src="imgs/photo.jpg" alt="Mohammed Ibrahim Mujahid Photo">
+                </span>
+                <h2>محمد مجاهد</h2>
+                <p class="en">Front-end Developer</p>
+                <div class="socila">
+                    <a href="https://instagram.com/thismujahid" title="instagram Account" target="_blank">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path d="m48 64h-32a16.0007 16.0007 0 0 1 -16-16v-32a16.0007 16.0007 0 0 1 16-16h32a16 16 0 0 1 16 16v32a16 16 0 0 1 -16 16" fill="#ff3a55"/><path d="m30 18h18a9.0006 9.0006 0 0 0 .92-17.954c-.306-.017-.609-.046-.92-.046h-32a16.0007 16.0007 0 0 0 -16 16v32a30.0007 30.0007 0 0 1 30-30" fill="#ff796c"/><path d="m48 32a16 16 0 1 0 16 16v-32a16 16 0 0 1 -16 16" fill="#e00047"/></g><circle cx="44.5" cy="19.5" fill="#fff" r="2.5"/><path d="m32 24a8 8 0 1 1 -8 8 8.0042 8.0042 0 0 1 8-8zm0-4a12 12 0 1 1 -12 12 12.0057 12.0057 0 0 1 12-12z" fill="#fff" fill-rule="evenodd"/><path d="m52 22a10 10 0 0 0 -10-10h-20a10 10 0 0 0 -10 10v20a10 10 0 0 0 10 10h20a10 10 0 0 0 10-10zm4 0a14 14 0 0 0 -14-14h-20a14 14 0 0 0 -14 14v20a14 14 0 0 0 14 14h20a14 14 0 0 0 14-14z" fill="#fff" fill-rule="evenodd"/></svg>
+                    </a>
+                    <a href="https://facebook.com/1thismujahid" title="Facebook Account" target="_blank">
+
+                        <svg  viewBox="0 0 64 64"  xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path d="m32 64h-16a16.0007 16.0007 0 0 1 -16-16v-32a16.0007 16.0007 0 0 1 16-16h32a16 16 0 0 1 16 16v32a16 16 0 0 1 -16 16h-6a5 5 0 0 0 -10 0z" fill="#3764b9"/><path d="m30 18h18a9.0006 9.0006 0 0 0 .92-17.954c-.306-.017-.609-.046-.92-.046h-32a16.0007 16.0007 0 0 0 -16 16v32a30.0007 30.0007 0 0 1 30-30" fill="#507dd2"/><path d="m48 32a16 16 0 1 0 16 16v-32a16 16 0 0 1 -16 16" fill="#1e4ba0"/><path d="m52 18a2 2 0 0 1 -2 2h-6a2 2 0 0 0 -2 2v8h7.56a2 2 0 0 1 1.9612 2.392c-.3713 1.857-.8757 4.379-1.2 6a2 2 0 0 1 -1.9612 1.608h-6.36v24h-10v-24h-6a2 2 0 0 1 -2-2v-6a2 2 0 0 1 2-2h6v-8a12 12 0 0 1 12-12h6a2 2 0 0 1 2 2z" fill="#fff"/></g></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/thismujahid" title="Linkedin Account" target="_blank"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path d="m48 64h-32a16.0007 16.0007 0 0 1 -16-16v-32a16.0007 16.0007 0 0 1 16-16h32a16 16 0 0 1 16 16v32a16 16 0 0 1 -16 16" fill="#2864b4"/><path d="m30 18h18a9.0006 9.0006 0 0 0 .92-17.954c-.306-.017-.609-.046-.92-.046h-32a16.0007 16.0007 0 0 0 -16 16v32a30.0007 30.0007 0 0 1 30-30" fill="#417dcd"/><path d="m48 32a16 16 0 1 0 16 16v-32a16 16 0 0 1 -16 16" fill="#0f4b9b"/></g><rect fill="#fff" height="27" rx="2" width="8" x="12" y="25"/><circle cx="16" cy="16" fill="#fff" r="5"/><path d="m34 28.64a9.2164 9.2164 0 0 1 8-4.64c5.087 0 10 3 10 11v15a1.9994 1.9994 0 0 1 -2 2h-4a1.9994 1.9994 0 0 1 -2-2v-14a5 5 0 0 0 -10 0v14a1.9994 1.9994 0 0 1 -2 2h-4a1.9994 1.9994 0 0 1 -2-2v-23a1.9994 1.9994 0 0 1 2-2h4a1.9994 1.9994 0 0 1 2 2z" fill="#fff" fill-rule="evenodd"/></svg></a>
+                    <a href="https://t.me/thismujahid" title="Telegram Account" target="_blank"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path d="m48 64h-32a16.0007 16.0007 0 0 1 -16-16v-32a16.0007 16.0007 0 0 1 16-16h32a16 16 0 0 1 16 16v32a16 16 0 0 1 -16 16" fill="#199bdf"/><path d="m30 18h18a9.0006 9.0006 0 0 0 .92-17.954c-.306-.017-.609-.046-.92-.046h-32a16.0007 16.0007 0 0 0 -16 16v32a30.0007 30.0007 0 0 1 30-30" fill="#32b4ff"/><path d="m48 32a16 16 0 1 0 16 16v-32a16 16 0 0 1 -16 16" fill="#0082be"/><path d="m45.08 17.032a3 3 0 0 1 4.11 3.229c-1.1654 7.579-3.302 21.467-4.4362 28.839a3 3 0 0 1 -4.7447 1.959c-4.0122-2.956-10.0276-7.388-13.0817-9.639a2 2 0 0 1 -.1868-3.064c2.7985-2.643 8.3723-7.907 12.2072-11.529a.5.5 0 0 0 -.6164-.782c-4.9171 3.207-12.4477 8.118-16.1385 10.525a5.9991 5.9991 0 0 1 -4.7328.795c-2.0323-.508-4.9637-1.241-7.5724-1.893a2 2 0 0 1 -.2784-3.789c9.0812-3.751 26.853-11.091 35.4707-14.651z" fill="#fff"/></g></svg></a>
+                    <a href="https://wa.me/2001151547569" title="Whatsapp Account" target="_blank"><svg 
+                            viewBox="0 0 64 64"  xmlns="http://www.w3.org/2000/svg">
+                            <g fill-rule="evenodd">
+                                <path
+                                    d="m48 64h-32a16.0007 16.0007 0 0 1 -16-16v-32a16.0007 16.0007 0 0 1 16-16h32a16 16 0 0 1 16 16v32a16 16 0 0 1 -16 16"
+                                    fill="#00d264" />
+                                <path
+                                    d="m30 18h18a9.0006 9.0006 0 0 0 .92-17.954c-.306-.017-.609-.046-.92-.046h-32a16.0007 16.0007 0 0 0 -16 16v32a30.0007 30.0007 0 0 1 30-30"
+                                    fill="#00eb78" />
+                                <path d="m48 32a16 16 0 1 0 16 16v-32a16 16 0 0 1 -16 16" fill="#00b950" />
+                                <g fill="#fff">
+                                    <path
+                                        d="m21.673 47.093a2.0027 2.0027 0 0 1 1.593.218 18.981 18.981 0 1 0 -6.581-6.574 1.9938 1.9938 0 0 1 .216 1.588c-.557 1.971-1.901 6.675-1.901 6.675s4.704-1.344 6.673-1.907zm-8.454-4.359a23.0015 23.0015 0 1 1 8.047 8.047s-6.377 1.822-9.535 2.725a1.0012 1.0012 0 0 1 -1.237-1.237c.903-3.158 2.725-9.535 2.725-9.535z" />
+                                    <path
+                                        d="m21.981 24.786a18.7035 18.7035 0 0 0 17.224 17.352h.002a4.964 4.964 0 0 0 3.894-1.44l.698-.698a1.76 1.76 0 0 0 .515-1.243v-1.482a1.0011 1.0011 0 0 0 -.553-.895c-1.053-.526-3.339-1.669-4.459-2.229a1.0009 1.0009 0 0 0 -1.155.187c-.558.558-1.44 1.441-1.94 1.94a1.001 1.001 0 0 1 -.903.274l-.009-.002a10.0005 10.0005 0 0 1 -7.845-7.845l-.002-.009a1.001 1.001 0 0 1 .274-.903c.499-.5 1.382-1.382 1.94-1.94a1.0009 1.0009 0 0 0 .187-1.155c-.56-1.12-1.703-3.406-2.229-4.459a1.0011 1.0011 0 0 0 -.895-.553h-1.26a2.1382 2.1382 0 0 0 -1.587.706c-.201.224-.432.48-.664.738a4.86 4.86 0 0 0 -1.238 3.589c.002.022.003.044.005.067z" />
+                                </g>
+                            </g>
+                        </svg></a>
+                    <a href="https://github.com/thismujahid" title="GitHub Account" target="_blank"><svg  viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path d="m48 64h-32a16.0007 16.0007 0 0 1 -16-16v-32a16.0007 16.0007 0 0 1 16-16h32a16 16 0 0 1 16 16v32a16 16 0 0 1 -16 16" fill="#2d2d2d"/><path d="m30 18h18a9.0006 9.0006 0 0 0 .92-17.954c-.306-.017-.609-.046-.92-.046h-32a16.0007 16.0007 0 0 0 -16 16v32a30.0007 30.0007 0 0 1 30-30" fill="#464646"/><path d="m48 32a16 16 0 1 0 16 16v-32a16 16 0 0 1 -16 16" fill="#141414"/><path d="m26 50.3511a2 2 0 0 1 -2.7833 1.8408 22.0207 22.0207 0 1 1 17.56-.0152 1.9841 1.9841 0 0 1 -2.761-1.8256c-.0157-2.3623-.0157-5.3511-.0157-5.3511a6 6 0 0 0 -1.7574-4.2426q-.1874-.1875-.3892-.3564a.2265.2265 0 0 1 .1451-.4005l.0015-.0005a10 10 0 0 0 10-10 9.9559 9.9559 0 0 0 -2.0111-6.0157 9.6556 9.6556 0 0 0 -.0959-4.6083l-.17-.6348a1 1 0 0 0 -1.2247-.7071l-.6348.17a9.6538 9.6538 0 0 0 -3.8 2.0089 10.0367 10.0367 0 0 0 -2.0635-.213h-8a10.0367 10.0367 0 0 0 -2.063.2131 9.6538 9.6538 0 0 0 -3.8-2.0089l-.6348-.17a1 1 0 0 0 -1.2247.7071l-.17.6348a9.6556 9.6556 0 0 0 -.0959 4.6083 9.9559 9.9559 0 0 0 -2.0116 6.0156 10 10 0 0 0 10 10h.0015a.227.227 0 0 1 .1449.4008q-.2013.1692-.389.3566a6 6 0 0 0 -1.6735 3.2426h-1.0839a6 6 0 0 1 -4.8-2.4l-.0006-.0008a3.998 3.998 0 0 0 -3.1984-1.5992h-.001a1 1 0 0 0 0 2 1.766 1.766 0 0 1 1.5143.8574l.1552.2586a8 8 0 0 0 6.8605 3.884h.47z" fill="#fff"/></g></svg></i></a>
+                    <a href="https://x.com/thismujahid" title="X(twitter) Account" target="_blank"><svg id="Capa_1" enable-background="new 0 0 1227 1227" viewBox="0 0 1227 1227" xmlns="http://www.w3.org/2000/svg"><path d="m654.53 592.55 276.12 394.95h-113.32l-225.32-322.28v-.02l-33.08-47.31-263.21-376.5h113.32l212.41 303.85z"/><path d="m1094.42 0h-961.84c-73.22 0-132.58 59.36-132.58 132.58v961.84c0 73.22 59.36 132.58 132.58 132.58h961.84c73.22 0 132.58-59.36 132.58-132.58v-961.84c0-73.22-59.36-132.58-132.58-132.58zm-311.8 1040.52-228.01-331.84-285.47 331.84h-73.78l326.49-379.5-326.49-475.17h249.02l215.91 314.23 270.32-314.23h73.78l-311.33 361.9h-.02l338.6 492.77z"/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/></svg></i></a>
+                </div>
+                <div class="contact-info">
+                    <p>
+
+                        <a href="tel:+2001151547569">
+                            <i class="fal fa-phone-alt"></i> <strong class="en" dir="ltr"> +20 01151547569
+                            </strong><br />
+                        </a>
+                    </p>
+                    <p>
+                        <a href="mailto:mohamed.mojahead@gmail.com">
+                            <span title="mohamed.mojahead@gmail.com"><i class="fal fa-envelope"></i> <strong class="en"
+                                    dir="ltr"> mohamed.mojahead@gmail.com </strong></span> </br>
+                        </a>
+                    </p>
+                    <!-- <p>
+                        <i class="fal fa-map-marked-alt"></i> الجيزة، مصر</br>
+                    </p> -->
+                    <!-- <p>
+                        <i class="fal fa-language"></i> اللغات: عربي - English
+                    </p> -->
                 </div>
             </div>
         </div>

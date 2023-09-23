@@ -17,20 +17,8 @@ for (let i = 0; i < profPics.length; i++) {
 }
 zoomCloser.onclick = (_) => zoomer.classList.remove("active");
 
-// Open and Close Manu In Mobile Screens
-var mobiNav = document.getElementById("mobile"),
-  openerNav = document.getElementById("openNav");
-
-openerNav.onclick = (_) => {
-  mobiNav.classList.add("active");
-  document.querySelector(".overlay-nav").classList.add("active");
-};
-document.querySelector(".overlay-nav").onclick = (_) => {
-  document.querySelector(".overlay-nav").classList.remove("active");
-  mobiNav.classList.remove("active");
-};
 //  Writer Function in Main Section
-let myJopsName = ["Front-End Developer", "CMD Friend", "Vue Developer"],
+let myJopsName = ["Hey there 👋", "Javascript Developer", "Typescript Developer", "Vue/Nuxt Developer"],
   count = 0,
   currentText = "",
   index = 0,
@@ -79,77 +67,46 @@ for (let i = 0; i < links.length; i++) {
   };
 }
 // Dark Mode and Set In Local storge
-let darkModeBtn = document.querySelectorAll(".darkMode"),
-  iconDark = document.querySelectorAll(".darkMode i"),
+let modeTogglerBtn = document.getElementById("modeToggler"),
   root = document.querySelector(":root");
-
-for (let i = 0; i < darkModeBtn.length; i++) {
-  darkModeBtn[i].onclick = (_) => {
-    for (let n = 0; n < iconDark.length; n++) {
-      if (iconDark[n].classList.contains("fa-sun")) {
-        // Light Mode
-        let mColorLight = "rgb(240,242,245)",
-          sColorLight = "#fff",
-          tColorLight = "#000",
-          thColorLight = "#1877F2",
-          iconLight = "fa-moon-stars",
-          riconLight = "fa-sun";
-        localStorage.clear();
-        iconDark[n].classList.remove(riconLight);
-        iconDark[n].classList.add(iconLight);
-        root.style.setProperty("--main-color", mColorLight);
-        root.style.setProperty("--sub-color", sColorLight);
-        root.style.setProperty("--text-color", tColorLight);
-        root.style.setProperty("--thrd-color", thColorLight);
-        localStorage.setItem("mcolor", mColorLight);
-        localStorage.setItem("scolor", sColorLight);
-        localStorage.setItem("tcolor", tColorLight);
-        localStorage.setItem("thcolor", thColorLight);
-        localStorage.setItem("icon", iconLight);
-        localStorage.setItem("ricon", riconLight);
-      } else {
-        // Dark Mode
-        let mColorDark = "#242526",
-          sColorDark = "#18191A",
-          tColorDark = "#d5d5d5",
-          thColorDark = "#FFC400",
-          TogglerIconDark = "fa-sun",
-          riconDark = "fa-moon-stars";
-        localStorage.clear();
-        iconDark[n].classList.add(TogglerIconDark);
-        iconDark[n].classList.remove(riconDark);
-        root.style.setProperty("--main-color", mColorDark);
-        root.style.setProperty("--sub-color", sColorDark);
-        root.style.setProperty("--text-color", tColorDark);
-        root.style.setProperty("--thrd-color", thColorDark);
-        localStorage.setItem("mcolor", mColorDark);
-        localStorage.setItem("scolor", sColorDark);
-        localStorage.setItem("tcolor", tColorDark);
-        localStorage.setItem("thcolor", thColorDark);
-        localStorage.setItem("icon", TogglerIconDark);
-        localStorage.setItem("ricon", riconDark);
-      }
-    }
-  };
-}
-
-function ModePageFromLocalStorge() {
-  let mColor = localStorage.getItem("mcolor"),
-    sColor = localStorage.getItem("scolor"),
-    tColor = localStorage.getItem("tcolor"),
-    thColor = localStorage.getItem("thcolor"),
-    icon = localStorage.getItem("icon"),
-    ricon = localStorage.getItem("ricon");
-  root.style.setProperty("--main-color", mColor);
-  root.style.setProperty("--sub-color", sColor);
-  root.style.setProperty("--text-color", tColor);
-  root.style.setProperty("--thrd-color", thColor);
-  for (let i = 0; i < iconDark.length; i++) {
-    iconDark[i].classList.add(icon);
-    iconDark[i].classList.remove(ricon);
+modeTogglerBtn.onclick = toggleMode;
+let mode = localStorage.getItem('mode') || 'dark';
+function toggleMode(options = {}) {
+  modeTogglerBtn.classList.remove(mode);
+  if (!options.noUpdateMode) {
+    mode = mode === 'light' ? 'dark' : 'light';
   }
+  let mainColor = localStorage.getItem("mcolor"),
+    subColor = localStorage.getItem("scolor"),
+    textColor = localStorage.getItem("tcolor"),
+    thrdColor = localStorage.getItem("thcolor");
+  if (mode === 'light') {
+    mainColor = "rgb(240,242,245)";
+    subColor = "#fff";
+    textColor = "#000";
+    thrdColor = "#1877F2";
+  } else if (mode === 'dark') {
+    mainColor = "#242526";
+    subColor = "#18191A";
+    textColor = "#d5d5d5";
+    thrdColor = "#FFC400";
+  }
+  modeTogglerBtn.classList.add(mode);
+  localStorage.setItem('mode', mode);
+  root.style.setProperty("--main-color", mainColor);
+  root.style.setProperty("--sub-color", subColor);
+  root.style.setProperty("--text-color", textColor);
+  root.style.setProperty("--thrd-color", thrdColor);
+  localStorage.setItem("mcolor", mainColor);
+  localStorage.setItem("scolor", subColor);
+  localStorage.setItem("tcolor", textColor);
+  localStorage.setItem("thcolor", thrdColor);
+  localStorage.setItem('mode', mode);
+
 }
-ModePageFromLocalStorge();
+toggleMode({ noUpdateMode: true });
+
+
 // Contact BTN In Main Section
 let contactBtn = document.getElementById("contactBtn"),
   mainSection = document.getElementById("home"),
@@ -170,7 +127,9 @@ contactBtn.onclick = (e) => {
 };
 // Loader
 window.onload = (_) => {
-  document.querySelector(".lds-roller").style.display = "none";
+  setTimeout(() => {
+    document.querySelector(".lds-roller").style.display = "none";
+  }, 800);
 };
 // Textarea On Foucs Move its Label
 let textArea = document.getElementById("msg"),
@@ -208,7 +167,6 @@ var formErrors = document.querySelectorAll(".err");
 var form = document.getElementById("contactForm");
 
 async function handleSubmit(event) {
-  var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   event.preventDefault();
   var status = document.getElementById("status-box");
   var data = new FormData(event.target);
@@ -270,74 +228,6 @@ async function handleSubmit(event) {
   }
 }
 form.addEventListener("submit", handleSubmit);
-// Control Buttons
-let nextBtn = document.querySelector(".next"),
-  prevBtn = document.querySelector(".prev"),
-  sections = document.querySelectorAll(".mainLink"),
-  start = 0,
-  sectinosCount = sections.length;
-nextBtn.onclick = (_) => {
-  activeLink.forEach((actLink) => {
-    actLink.classList.remove("active");
-  });
-
-  if (start === sectinosCount - 1) {
-    start = 0;
-    sections.forEach((section) => {
-      section.classList.remove("active");
-    });
-    sections[start].classList.add("active");
-    activeLink[start].classList.add("active");
-  } else {
-    start++;
-    sections.forEach((section) => {
-      section.classList.remove("active");
-    });
-    activeLink[start].classList.add("active");
-    sections[start].classList.add("active");
-  }
-  location.hash = "/" + links[start].dataset.link;
-  document.title = "محمد مجاهد - " + links[start].dataset.title;
-};
-prevBtn.onclick = () => {
-  activeLink.forEach((actLink) => {
-    actLink.classList.remove("active");
-  });
-
-  if (start === 0) {
-    start = sectinosCount - 1;
-    sections.forEach((section) => {
-      section.classList.remove("active");
-    });
-    sections[start].classList.add("active");
-    activeLink[start].classList.add("active");
-  } else {
-    start--;
-    sections.forEach((section) => {
-      section.classList.remove("active");
-    });
-    sections[start].classList.add("active");
-    activeLink[start].classList.add("active");
-  }
-  location.hash = "/" + links[start].dataset.link;
-  document.title = "محمد مجاهد - " + links[start].dataset.title;
-};
-const secId = location.hash.replace("#/", "");
-const loadedSection = document.getElementById(secId);
-if (loadedSection) {
-  sections.forEach((sec) => {
-    sec.classList.remove("active");
-  });
-  loadedSection.classList.add("active");
-  links.forEach((a) => {
-    if (a.dataset.link == secId) {
-      a.parentElement.classList.add("active");
-      document.title = "محمد مجاهد - " + a.dataset.title;
-    } else {
-      a.parentElement.classList.remove("active");
-    }
-  });
-}
 // Skill Width Progress
 let skillLevel = document.querySelectorAll(".counter"),
   skilProg = document.querySelectorAll(".progress");
