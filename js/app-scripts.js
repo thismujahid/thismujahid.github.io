@@ -35,7 +35,7 @@ let myJopsName = ["Web Developer", "TypeScript/JavaScript Developer", "Vue/Nuxt 
     count++;
     index = 0;
   }
-  setTimeout(typer, 300);
+  setTimeout(typer, 100);
 })();
 // Moveing Between Sections
 
