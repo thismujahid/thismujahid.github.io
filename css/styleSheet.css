@@ -16,6 +16,8 @@
     box-sizing: border-box;
     user-zoom: none;
     font-family: 'Rubik', sans-serif;
+    scroll-behavior: smooth;
+
 }
 
 .ar {
@@ -377,11 +379,12 @@ body {
 /* Start Profile Element */
 
 .prof-info {
-    position: relative;
+    position: sticky;
     width: 30%;
     background-color: var(--main-color);
     overflow: hidden;
     height: 100vh;
+    top: 0;
     display: flex;
     justify-content: center;
     overflow-y: auto;
