@@ -1,14 +1,6 @@
-// Owner Info
-const ownerInfo = {
-  developerName: "Mohamed Ibrahim Mujahid",
-  developerPhone: "+2001559079068",
-  createdIn: "18/4/2021",
-};
-console.log(
-  `Name: ${ownerInfo.developerName}, Phone: ${ownerInfo.developerPhone}, Created Date: ${ownerInfo.createdIn}.`
-);
-let links = document.querySelectorAll(".navigator ul li a"),
-  activeLink = document.querySelectorAll(".navigator ul li");
+/*
+!The code written below is not my current experience. It was written a long time ago, almost at the beginning of 2020
+*/
 let zoomer = document.getElementById("zoom"),
   profPics = document.querySelectorAll(".profPic img"),
   zoomCloser = document.querySelector("#zoom .fa-times");
@@ -18,56 +10,44 @@ for (let i = 0; i < profPics.length; i++) {
 zoomCloser.onclick = (_) => zoomer.classList.remove("active");
 
 //  Writer Function in Main Section
-let myJopsName = ["Web Developer", "TypeScript/JavaScript Developer", "Vue/Nuxt Developer"],
-  count = 0,
-  currentText = "",
-  index = 0,
-  letter = "";
-(async function typer() {
-  
-  if (count === myJopsName.length) {
-    count = 0;
+let positionIndex = 0;
+let myPostions = ["Web Developer", "TypeScript/JavaScript Developer", "Vue/Nuxt Developer"];
+function writeWrapper() {
+  const position = myPostions[positionIndex];
+  document.getElementById("writeIn").textContent = ""
+  let index = 0;
+  function writeIn() {
+    const write = setInterval(() => {
+      let letter = position.charAt(index);
+      index++
+      document.getElementById("writeIn").textContent += letter;
+      if (index === position.length) {
+        setTimeout(() => {
+          writeInReverse();
+        }, 2000);
+        clearInterval(write);
+      }
+    }, 100)
   }
-  currentText = myJopsName[count];
-  letter = currentText.slice(0, ++index);
-  document.getElementById("writeIn").textContent = letter;
-
-  if (letter.length === currentText.length) {
-    const wiat = await setTimeout(()=>{}, 2000)
-    count++;
-    index = 0;
+  function writeInReverse() {
+    const write = setInterval(() => {
+      index--
+      document.getElementById("writeIn").textContent = document.getElementById("writeIn").textContent.slice(0, index);
+      if (index === 0) {
+        if (positionIndex !== myPostions.length - 1) {
+          positionIndex++;
+          writeWrapper();
+        } else {
+          positionIndex = 0;
+          writeWrapper();
+        }
+        clearInterval(write);
+      }
+    }, 40)
   }
-  setTimeout(typer, 100);
-})();
-// Moveing Between Sections
-
-for (let i = 0; i < links.length; i++) {
-  links[i].onclick = function (e) {
-    e.preventDefault();
-    location.hash = "/" + links[i].dataset.link;
-    document.title = "محمد مجاهد - " + links[i].dataset.title;
-    mobiNav.classList.remove("active");
-    document.querySelector(".overlay-nav").classList.remove("active");
-    activeLink.forEach((actLink) => {
-      actLink.classList.remove("active");
-    });
-    activeLink[i].classList.add("active");
-    // e.preventDefault();
-    let activeEle = document.getElementById(this.dataset.link);
-    let current = activeEle;
-    let nextSibling = current.nextElementSibling;
-    let prevSibling = current.previousElementSibling;
-    while (nextSibling) {
-      nextSibling.classList.remove("active");
-      nextSibling = nextSibling.nextElementSibling;
-    }
-    while (prevSibling) {
-      prevSibling.classList.remove("active");
-      prevSibling = prevSibling.previousElementSibling;
-    }
-    activeEle.classList.add("active");
-  };
+  writeIn();
 }
+writeWrapper();
 // Dark Mode and Set In Local storge
 let modeTogglerBtn = document.getElementById("modeToggler"),
   root = document.querySelector(":root");
@@ -210,11 +190,3 @@ async function handleSubmit(event) {
   }
 }
 form.addEventListener("submit", handleSubmit);
-// Skill Width Progress
-let skillLevel = document.querySelectorAll(".counter"),
-  skilProg = document.querySelectorAll(".progress");
-let vueCounter = document.querySelector(".counter.vue");
-vueCounter.innerText = Math.ceil((600 * 100) / 670);
-for (let i = 0; i < skillLevel.length; i++) {
-  skilProg[i].style.width = skillLevel[i].textContent - 2 + ".3" + "%";
-}
