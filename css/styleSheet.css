@@ -327,7 +327,8 @@ body {
 .container {
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
+    flex-wrap: wrap;
     position: relative;
     display: flex;
     justify-content: center;
@@ -1075,6 +1076,14 @@ body {
 .form form{
     width: 60%;
 }
+@media (max-width:768px) {
+    .slides .image{
+        display: none;
+    }
+    .form form{
+        width: 100%;
+    }   
+}
 .contact .contact-container .form form {
     position: relative;
 }
@@ -1270,8 +1279,8 @@ i {
     }
 
 
-    .portfolio {
-        padding: 70px 10px;
+    .portfolio,.skills {
+        padding: 40px 10px;
     }
 }
 
