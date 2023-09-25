@@ -23,7 +23,8 @@ let myJopsName = ["Web Developer", "TypeScript/JavaScript Developer", "Vue/Nuxt 
   currentText = "",
   index = 0,
   letter = "";
-(function typer() {
+(async function typer() {
+  
   if (count === myJopsName.length) {
     count = 0;
   }
@@ -32,6 +33,7 @@ let myJopsName = ["Web Developer", "TypeScript/JavaScript Developer", "Vue/Nuxt 
   document.getElementById("writeIn").textContent = letter;
 
   if (letter.length === currentText.length) {
+    const wiat = await setTimeout(()=>{}, 2000)
     count++;
     index = 0;
   }
