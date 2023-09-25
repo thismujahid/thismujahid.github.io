@@ -102,6 +102,7 @@ body {
     display: block;
 }
 .fadeInOut{
+    font-weight: bolder;
     animation: fadeInOut 1s ease-in infinite;
     -webkit-animation: fadeInOut 1s ease-in infinite;
 }
