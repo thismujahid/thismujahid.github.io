@@ -11,7 +11,7 @@ zoomCloser.onclick = (_) => zoomer.classList.remove("active");
 
 //  Writer Function in Main Section
 let positionIndex = 0;
-let myPostions = ["Web Developer", "TypeScript/JavaScript Developer", "Vue/Nuxt Developer"];
+let myPostions = ["Web Developer.","creative web programmer.","javascript fan.", "Front-end (Vue) Developer.", "Back-end (NodeJs) Developer.", "using vue family.", "linux Sys fan.", "designing UIs using Figma and XD."];
 function writeWrapper() {
   const position = myPostions[positionIndex];
   document.getElementById("writeIn").textContent = ""

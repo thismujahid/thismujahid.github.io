@@ -52,6 +52,7 @@ body {
 }
 .my-5{
     margin: 5px 0;
+    display: block;
 }
 .spin {
     animation: spining 1s linear infinite;
