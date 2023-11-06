@@ -19,7 +19,9 @@
     scroll-behavior: smooth;
 
 }
-
+.text-primary{
+    color: var(--thrd-color) !important;
+}
 .ar {
     font-family: 'Rubik', sans-serif;
 
@@ -48,7 +50,9 @@ body {
     font-family: 'Poppins', sans-serif;
 
 }
-
+.my-5{
+    margin: 5px 0;
+}
 .spin {
     animation: spining 1s linear infinite;
     -webkit-animation: spining 1s linear infinite;
