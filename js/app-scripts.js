@@ -36,11 +36,10 @@ function writeWrapper() {
       if (index === 0) {
         if (positionIndex !== myPostions.length - 1) {
           positionIndex++;
-          writeWrapper();
         } else {
           positionIndex = 0;
-          writeWrapper();
         }
+        writeWrapper();
         clearInterval(write);
       }
     }, 40)
